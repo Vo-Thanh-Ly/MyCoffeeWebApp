@@ -3,7 +3,8 @@
 This repository contains the source code for MyCoffeeWebApp, a web application focused on managing café finances.
 
 # Technology Stack
-
+ef from database
+entity famework
 # Backend
 C# ASP.NET MVC
 
@@ -14,6 +15,9 @@ Bootstrap 5
 # Integrated Development Environment (IDE)
 Visual Studio 2022
 Getting Started
+
+# Database
+SQL server 2019
 
 # To run this application locally:
 
