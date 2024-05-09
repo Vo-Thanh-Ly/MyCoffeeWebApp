@@ -1,0 +1,301 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="MyCoffeeWebAppModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="COLLECT_MONEY">
+          <Key>
+            <PropertyRef Name="CLMN_ID" />
+          </Key>
+          <Property Name="CLMN_ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DATE" Type="date" Nullable="false" />
+          <Property Name="MN_ID" Type="int" Nullable="false" />
+          <Property Name="CLMN_QUANLITY" Type="int" Nullable="false" />
+          <Property Name="CLMN_PRICE" Type="bigint" Nullable="false" />
+          <Property Name="CLMN_NOTE" Type="nvarchar" MaxLength="300" />
+        </EntityType>
+        <EntityType Name="DATE">
+          <Key>
+            <PropertyRef Name="DATE" />
+          </Key>
+          <Property Name="DATE" Type="date" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MENU">
+          <Key>
+            <PropertyRef Name="MN_ID" />
+          </Key>
+          <Property Name="MN_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MN_PRODUCTNAME" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="MN_PRICE" Type="bigint" />
+        </EntityType>
+        <EntityType Name="SPENDING_MONEY">
+          <Key>
+            <PropertyRef Name="SPENDING_ID" />
+          </Key>
+          <Property Name="SPENDING_ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DATE" Type="date" Nullable="false" />
+          <Property Name="SPENDING_CONTENT" Type="nvarchar" MaxLength="150" Nullable="false" />
+          <Property Name="SPENDING_QUANLITY" Type="int" Nullable="false" />
+          <Property Name="SPENDING_PRICE" Type="bigint" Nullable="false" />
+          <Property Name="SPENDING_NOTE" Type="varchar" MaxLength="150" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <Association Name="FK_COLLECT__RELATIONS_DATE">
+          <End Role="DATE" Type="Self.DATE" Multiplicity="1" />
+          <End Role="COLLECT_MONEY" Type="Self.COLLECT_MONEY" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DATE">
+              <PropertyRef Name="DATE" />
+            </Principal>
+            <Dependent Role="COLLECT_MONEY">
+              <PropertyRef Name="DATE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_COLLECT__RELATIONS_MENU">
+          <End Role="MENU" Type="Self.MENU" Multiplicity="1" />
+          <End Role="COLLECT_MONEY" Type="Self.COLLECT_MONEY" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MENU">
+              <PropertyRef Name="MN_ID" />
+            </Principal>
+            <Dependent Role="COLLECT_MONEY">
+              <PropertyRef Name="MN_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SPENDING_RELATIONS_DATE">
+          <End Role="DATE" Type="Self.DATE" Multiplicity="1" />
+          <End Role="SPENDING_MONEY" Type="Self.SPENDING_MONEY" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DATE">
+              <PropertyRef Name="DATE" />
+            </Principal>
+            <Dependent Role="SPENDING_MONEY">
+              <PropertyRef Name="DATE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="MyCoffeeWebAppModelStoreContainer">
+          <EntitySet Name="COLLECT_MONEY" EntityType="Self.COLLECT_MONEY" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DATE" EntityType="Self.DATE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MENU" EntityType="Self.MENU" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SPENDING_MONEY" EntityType="Self.SPENDING_MONEY" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_COLLECT__RELATIONS_DATE" Association="Self.FK_COLLECT__RELATIONS_DATE">
+            <End Role="DATE" EntitySet="DATE" />
+            <End Role="COLLECT_MONEY" EntitySet="COLLECT_MONEY" />
+          </AssociationSet>
+          <AssociationSet Name="FK_COLLECT__RELATIONS_MENU" Association="Self.FK_COLLECT__RELATIONS_MENU">
+            <End Role="MENU" EntitySet="MENU" />
+            <End Role="COLLECT_MONEY" EntitySet="COLLECT_MONEY" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SPENDING_RELATIONS_DATE" Association="Self.FK_SPENDING_RELATIONS_DATE">
+            <End Role="DATE" EntitySet="DATE" />
+            <End Role="SPENDING_MONEY" EntitySet="SPENDING_MONEY" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="MyCoffeeWebAppModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="COLLECT_MONEY">
+          <Key>
+            <PropertyRef Name="CLMN_ID" />
+          </Key>
+          <Property Name="CLMN_ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DATE" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="MN_ID" Type="Int32" Nullable="false" />
+          <Property Name="CLMN_QUANLITY" Type="Int32" Nullable="false" />
+          <Property Name="CLMN_PRICE" Type="Int64" Nullable="false" />
+          <Property Name="CLMN_NOTE" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="DATE1" Relationship="Self.FK_COLLECT__RELATIONS_DATE" FromRole="COLLECT_MONEY" ToRole="DATE" />
+          <NavigationProperty Name="MENU" Relationship="Self.FK_COLLECT__RELATIONS_MENU" FromRole="COLLECT_MONEY" ToRole="MENU" />
+        </EntityType>
+        <EntityType Name="DATE">
+          <Key>
+            <PropertyRef Name="DATE1" />
+          </Key>
+          <Property Name="DATE1" Type="DateTime" Nullable="false" Precision="0" />
+          <NavigationProperty Name="COLLECT_MONEY" Relationship="Self.FK_COLLECT__RELATIONS_DATE" FromRole="DATE" ToRole="COLLECT_MONEY" />
+          <NavigationProperty Name="SPENDING_MONEY" Relationship="Self.FK_SPENDING_RELATIONS_DATE" FromRole="DATE" ToRole="SPENDING_MONEY" />
+        </EntityType>
+        <EntityType Name="MENU">
+          <Key>
+            <PropertyRef Name="MN_ID" />
+          </Key>
+          <Property Name="MN_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MN_PRODUCTNAME" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="MN_PRICE" Type="Int64" />
+          <NavigationProperty Name="COLLECT_MONEY" Relationship="Self.FK_COLLECT__RELATIONS_MENU" FromRole="MENU" ToRole="COLLECT_MONEY" />
+        </EntityType>
+        <EntityType Name="SPENDING_MONEY">
+          <Key>
+            <PropertyRef Name="SPENDING_ID" />
+          </Key>
+          <Property Name="SPENDING_ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DATE" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="SPENDING_CONTENT" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="SPENDING_QUANLITY" Type="Int32" Nullable="false" />
+          <Property Name="SPENDING_PRICE" Type="Int64" Nullable="false" />
+          <Property Name="SPENDING_NOTE" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="DATE1" Relationship="Self.FK_SPENDING_RELATIONS_DATE" FromRole="SPENDING_MONEY" ToRole="DATE" />
+        </EntityType>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <Association Name="FK_COLLECT__RELATIONS_DATE">
+          <End Role="DATE" Type="Self.DATE" Multiplicity="1" />
+          <End Role="COLLECT_MONEY" Type="Self.COLLECT_MONEY" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DATE">
+              <PropertyRef Name="DATE1" />
+            </Principal>
+            <Dependent Role="COLLECT_MONEY">
+              <PropertyRef Name="DATE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_COLLECT__RELATIONS_MENU">
+          <End Role="MENU" Type="Self.MENU" Multiplicity="1" />
+          <End Role="COLLECT_MONEY" Type="Self.COLLECT_MONEY" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MENU">
+              <PropertyRef Name="MN_ID" />
+            </Principal>
+            <Dependent Role="COLLECT_MONEY">
+              <PropertyRef Name="MN_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SPENDING_RELATIONS_DATE">
+          <End Role="DATE" Type="Self.DATE" Multiplicity="1" />
+          <End Role="SPENDING_MONEY" Type="Self.SPENDING_MONEY" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DATE">
+              <PropertyRef Name="DATE1" />
+            </Principal>
+            <Dependent Role="SPENDING_MONEY">
+              <PropertyRef Name="DATE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="MyCoffeeWebAppEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="COLLECT_MONEY" EntityType="Self.COLLECT_MONEY" />
+          <EntitySet Name="DATEs" EntityType="Self.DATE" />
+          <EntitySet Name="MENUs" EntityType="Self.MENU" />
+          <EntitySet Name="SPENDING_MONEY" EntityType="Self.SPENDING_MONEY" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+          <AssociationSet Name="FK_COLLECT__RELATIONS_DATE" Association="Self.FK_COLLECT__RELATIONS_DATE">
+            <End Role="DATE" EntitySet="DATEs" />
+            <End Role="COLLECT_MONEY" EntitySet="COLLECT_MONEY" />
+          </AssociationSet>
+          <AssociationSet Name="FK_COLLECT__RELATIONS_MENU" Association="Self.FK_COLLECT__RELATIONS_MENU">
+            <End Role="MENU" EntitySet="MENUs" />
+            <End Role="COLLECT_MONEY" EntitySet="COLLECT_MONEY" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SPENDING_RELATIONS_DATE" Association="Self.FK_SPENDING_RELATIONS_DATE">
+            <End Role="DATE" EntitySet="DATEs" />
+            <End Role="SPENDING_MONEY" EntitySet="SPENDING_MONEY" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="MyCoffeeWebAppModelStoreContainer" CdmEntityContainer="MyCoffeeWebAppEntities">
+          <EntitySetMapping Name="COLLECT_MONEY">
+            <EntityTypeMapping TypeName="MyCoffeeWebAppModel.COLLECT_MONEY">
+              <MappingFragment StoreEntitySet="COLLECT_MONEY">
+                <ScalarProperty Name="CLMN_ID" ColumnName="CLMN_ID" />
+                <ScalarProperty Name="DATE" ColumnName="DATE" />
+                <ScalarProperty Name="MN_ID" ColumnName="MN_ID" />
+                <ScalarProperty Name="CLMN_QUANLITY" ColumnName="CLMN_QUANLITY" />
+                <ScalarProperty Name="CLMN_PRICE" ColumnName="CLMN_PRICE" />
+                <ScalarProperty Name="CLMN_NOTE" ColumnName="CLMN_NOTE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DATEs">
+            <EntityTypeMapping TypeName="MyCoffeeWebAppModel.DATE">
+              <MappingFragment StoreEntitySet="DATE">
+                <ScalarProperty Name="DATE1" ColumnName="DATE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MENUs">
+            <EntityTypeMapping TypeName="MyCoffeeWebAppModel.MENU">
+              <MappingFragment StoreEntitySet="MENU">
+                <ScalarProperty Name="MN_ID" ColumnName="MN_ID" />
+                <ScalarProperty Name="MN_PRODUCTNAME" ColumnName="MN_PRODUCTNAME" />
+                <ScalarProperty Name="MN_PRICE" ColumnName="MN_PRICE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SPENDING_MONEY">
+            <EntityTypeMapping TypeName="MyCoffeeWebAppModel.SPENDING_MONEY">
+              <MappingFragment StoreEntitySet="SPENDING_MONEY">
+                <ScalarProperty Name="SPENDING_ID" ColumnName="SPENDING_ID" />
+                <ScalarProperty Name="DATE" ColumnName="DATE" />
+                <ScalarProperty Name="SPENDING_CONTENT" ColumnName="SPENDING_CONTENT" />
+                <ScalarProperty Name="SPENDING_QUANLITY" ColumnName="SPENDING_QUANLITY" />
+                <ScalarProperty Name="SPENDING_PRICE" ColumnName="SPENDING_PRICE" />
+                <ScalarProperty Name="SPENDING_NOTE" ColumnName="SPENDING_NOTE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="MyCoffeeWebAppModel.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
