@@ -167,8 +167,12 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\COLLECT_MONEYController.cs" />
+    <Compile Include="Controllers\DATEsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\MENUsController.cs" />
+    <Compile Include="Controllers\SPENDING_MONEYController.cs" />
     <Compile Include="DATE.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -271,6 +275,8 @@
       <DependentUpon>Model1.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-3.7.1.intellisense.js" />
+    <Content Include="Scripts\chart.js" />
+    <Content Include="Scripts\chart.min.js" />
     <Content Include="Scripts\jquery-3.7.1.js" />
     <Content Include="Scripts\jquery-3.7.1.min.js" />
     <Content Include="Scripts\jquery-3.7.1.slim.js" />
@@ -317,6 +323,26 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\DATEs\Create.cshtml" />
+    <Content Include="Views\DATEs\Delete.cshtml" />
+    <Content Include="Views\DATEs\Details.cshtml" />
+    <Content Include="Views\DATEs\Edit.cshtml" />
+    <Content Include="Views\DATEs\Index.cshtml" />
+    <Content Include="Views\COLLECT_MONEY\Create.cshtml" />
+    <Content Include="Views\COLLECT_MONEY\Delete.cshtml" />
+    <Content Include="Views\COLLECT_MONEY\Details.cshtml" />
+    <Content Include="Views\COLLECT_MONEY\Edit.cshtml" />
+    <Content Include="Views\COLLECT_MONEY\Index.cshtml" />
+    <Content Include="Views\MENUs\Create.cshtml" />
+    <Content Include="Views\MENUs\Delete.cshtml" />
+    <Content Include="Views\MENUs\Details.cshtml" />
+    <Content Include="Views\MENUs\Edit.cshtml" />
+    <Content Include="Views\MENUs\Index.cshtml" />
+    <Content Include="Views\SPENDING_MONEY\Create.cshtml" />
+    <Content Include="Views\SPENDING_MONEY\Delete.cshtml" />
+    <Content Include="Views\SPENDING_MONEY\Details.cshtml" />
+    <Content Include="Views\SPENDING_MONEY\Edit.cshtml" />
+    <Content Include="Views\SPENDING_MONEY\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

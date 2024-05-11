@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="MyCoffeeWebAppModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="MyCoffeeWebAppModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="COLLECT_MONEY">
           <Key>
             <PropertyRef Name="CLMN_ID" />
@@ -21,6 +21,8 @@
             <PropertyRef Name="DATE" />
           </Key>
           <Property Name="DATE" Type="date" Nullable="false" />
+          <Property Name="date_name" Type="date" />
+          <Property Name="note" Type="nvarchar" MaxLength="1000" />
         </EntityType>
         <EntityType Name="MENU">
           <Key>
@@ -106,8 +108,7 @@
             <End Role="SPENDING_MONEY" EntitySet="SPENDING_MONEY" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="MyCoffeeWebAppModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -131,6 +132,8 @@
           <Property Name="DATE1" Type="DateTime" Nullable="false" Precision="0" />
           <NavigationProperty Name="COLLECT_MONEY" Relationship="Self.FK_COLLECT__RELATIONS_DATE" FromRole="DATE" ToRole="COLLECT_MONEY" />
           <NavigationProperty Name="SPENDING_MONEY" Relationship="Self.FK_SPENDING_RELATIONS_DATE" FromRole="DATE" ToRole="SPENDING_MONEY" />
+          <Property Name="date_name" Type="DateTime" Precision="0" />
+          <Property Name="note" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="MENU">
           <Key>
@@ -239,6 +242,8 @@
           <EntitySetMapping Name="DATEs">
             <EntityTypeMapping TypeName="MyCoffeeWebAppModel.DATE">
               <MappingFragment StoreEntitySet="DATE">
+                <ScalarProperty Name="note" ColumnName="note" />
+                <ScalarProperty Name="date_name" ColumnName="date_name" />
                 <ScalarProperty Name="DATE1" ColumnName="DATE" />
               </MappingFragment>
             </EntityTypeMapping>
