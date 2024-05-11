@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MyCoffeeWebAppModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="COLLECT_MONEY">
+    <Key>
+      <PropertyRef Name="CLMN_ID" />
+    </Key>
+    <Property Name="CLMN_ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DATE" Type="date" Nullable="false" />
+    <Property Name="MN_ID" Type="int" Nullable="false" />
+    <Property Name="CLMN_QUANLITY" Type="int" Nullable="false" />
+    <Property Name="CLMN_PRICE" Type="bigint" Nullable="false" />
+    <Property Name="CLMN_NOTE" Type="nvarchar" MaxLength="300" />
+  </EntityType>
+  <EntityType Name="DATE">
+    <Key>
+      <PropertyRef Name="DATE" />
+    </Key>
+    <Property Name="DATE" Type="date" Nullable="false" />
+    <Property Name="date_name" Type="date" />
+    <Property Name="note" Type="nvarchar" MaxLength="1000" />
+  </EntityType>
+  <EntityType Name="MENU">
+    <Key>
+      <PropertyRef Name="MN_ID" />
+    </Key>
+    <Property Name="MN_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MN_PRODUCTNAME" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="MN_PRICE" Type="bigint" />
+  </EntityType>
+  <EntityType Name="SPENDING_MONEY">
+    <Key>
+      <PropertyRef Name="SPENDING_ID" />
+    </Key>
+    <Property Name="SPENDING_ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DATE" Type="date" Nullable="false" />
+    <Property Name="SPENDING_CONTENT" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="SPENDING_QUANLITY" Type="int" Nullable="false" />
+    <Property Name="SPENDING_PRICE" Type="bigint" Nullable="false" />
+    <Property Name="SPENDING_NOTE" Type="varchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <Association Name="FK_COLLECT__RELATIONS_DATE">
+    <End Role="DATE" Type="Self.DATE" Multiplicity="1" />
+    <End Role="COLLECT_MONEY" Type="Self.COLLECT_MONEY" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DATE">
+        <PropertyRef Name="DATE" />
+      </Principal>
+      <Dependent Role="COLLECT_MONEY">
+        <PropertyRef Name="DATE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COLLECT__RELATIONS_MENU">
+    <End Role="MENU" Type="Self.MENU" Multiplicity="1" />
+    <End Role="COLLECT_MONEY" Type="Self.COLLECT_MONEY" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MENU">
+        <PropertyRef Name="MN_ID" />
+      </Principal>
+      <Dependent Role="COLLECT_MONEY">
+        <PropertyRef Name="MN_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SPENDING_RELATIONS_DATE">
+    <End Role="DATE" Type="Self.DATE" Multiplicity="1" />
+    <End Role="SPENDING_MONEY" Type="Self.SPENDING_MONEY" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DATE">
+        <PropertyRef Name="DATE" />
+      </Principal>
+      <Dependent Role="SPENDING_MONEY">
+        <PropertyRef Name="DATE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="MyCoffeeWebAppModelStoreContainer">
+    <EntitySet Name="COLLECT_MONEY" EntityType="Self.COLLECT_MONEY" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DATE" EntityType="Self.DATE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MENU" EntityType="Self.MENU" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SPENDING_MONEY" EntityType="Self.SPENDING_MONEY" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_COLLECT__RELATIONS_DATE" Association="Self.FK_COLLECT__RELATIONS_DATE">
+      <End Role="DATE" EntitySet="DATE" />
+      <End Role="COLLECT_MONEY" EntitySet="COLLECT_MONEY" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COLLECT__RELATIONS_MENU" Association="Self.FK_COLLECT__RELATIONS_MENU">
+      <End Role="MENU" EntitySet="MENU" />
+      <End Role="COLLECT_MONEY" EntitySet="COLLECT_MONEY" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SPENDING_RELATIONS_DATE" Association="Self.FK_SPENDING_RELATIONS_DATE">
+      <End Role="DATE" EntitySet="DATE" />
+      <End Role="SPENDING_MONEY" EntitySet="SPENDING_MONEY" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

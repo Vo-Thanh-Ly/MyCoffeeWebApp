@@ -22,6 +22,8 @@ namespace MyCoffeeWebApp
         }
     
         public System.DateTime DATE1 { get; set; }
+        public Nullable<System.DateTime> date_name { get; set; }
+        public string note { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<COLLECT_MONEY> COLLECT_MONEY { get; set; }

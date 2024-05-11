@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MyCoffeeWebAppModelStoreContainer" CdmEntityContainer="MyCoffeeWebAppEntities">
+    <EntitySetMapping Name="COLLECT_MONEY">
+      <EntityTypeMapping TypeName="MyCoffeeWebAppModel.COLLECT_MONEY">
+        <MappingFragment StoreEntitySet="COLLECT_MONEY">
+          <ScalarProperty Name="CLMN_ID" ColumnName="CLMN_ID" />
+          <ScalarProperty Name="DATE" ColumnName="DATE" />
+          <ScalarProperty Name="MN_ID" ColumnName="MN_ID" />
+          <ScalarProperty Name="CLMN_QUANLITY" ColumnName="CLMN_QUANLITY" />
+          <ScalarProperty Name="CLMN_PRICE" ColumnName="CLMN_PRICE" />
+          <ScalarProperty Name="CLMN_NOTE" ColumnName="CLMN_NOTE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DATEs">
+      <EntityTypeMapping TypeName="MyCoffeeWebAppModel.DATE">
+        <MappingFragment StoreEntitySet="DATE">
+          <ScalarProperty Name="note" ColumnName="note" />
+          <ScalarProperty Name="date_name" ColumnName="date_name" />
+          <ScalarProperty Name="DATE1" ColumnName="DATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MENUs">
+      <EntityTypeMapping TypeName="MyCoffeeWebAppModel.MENU">
+        <MappingFragment StoreEntitySet="MENU">
+          <ScalarProperty Name="MN_ID" ColumnName="MN_ID" />
+          <ScalarProperty Name="MN_PRODUCTNAME" ColumnName="MN_PRODUCTNAME" />
+          <ScalarProperty Name="MN_PRICE" ColumnName="MN_PRICE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SPENDING_MONEY">
+      <EntityTypeMapping TypeName="MyCoffeeWebAppModel.SPENDING_MONEY">
+        <MappingFragment StoreEntitySet="SPENDING_MONEY">
+          <ScalarProperty Name="SPENDING_ID" ColumnName="SPENDING_ID" />
+          <ScalarProperty Name="DATE" ColumnName="DATE" />
+          <ScalarProperty Name="SPENDING_CONTENT" ColumnName="SPENDING_CONTENT" />
+          <ScalarProperty Name="SPENDING_QUANLITY" ColumnName="SPENDING_QUANLITY" />
+          <ScalarProperty Name="SPENDING_PRICE" ColumnName="SPENDING_PRICE" />
+          <ScalarProperty Name="SPENDING_NOTE" ColumnName="SPENDING_NOTE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="MyCoffeeWebAppModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
