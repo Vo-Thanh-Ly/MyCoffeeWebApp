@@ -19,6 +19,8 @@ namespace MyCoffeeWebApp
         {
             this.COLLECT_MONEY = new HashSet<COLLECT_MONEY>();
             this.SPENDING_MONEY = new HashSet<SPENDING_MONEY>();
+            this.ALCOHOL_COLLECTS_MONEY = new HashSet<ALCOHOL_COLLECTS_MONEY>();
+            this.ALCOHOL_SPENDING_MONEY = new HashSet<ALCOHOL_SPENDING_MONEY>();
         }
     
         public System.DateTime DATE1 { get; set; }
@@ -29,5 +31,9 @@ namespace MyCoffeeWebApp
         public virtual ICollection<COLLECT_MONEY> COLLECT_MONEY { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<SPENDING_MONEY> SPENDING_MONEY { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ALCOHOL_COLLECTS_MONEY> ALCOHOL_COLLECTS_MONEY { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ALCOHOL_SPENDING_MONEY> ALCOHOL_SPENDING_MONEY { get; set; }
     }
 }

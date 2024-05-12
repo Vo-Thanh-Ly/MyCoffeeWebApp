@@ -158,6 +158,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ALCOHOL_COLLECTS_MONEY.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ALCOHOL_SPENDING_MONEY.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\IdentityConfig.cs" />
@@ -205,7 +211,7 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Startup.cs" />
-    <Compile Include="sysdiagram.cs">
+    <Compile Include="TYPE_OF_WINE.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
   </ItemGroup>

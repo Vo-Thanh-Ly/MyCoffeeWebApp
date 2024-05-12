@@ -12,12 +12,14 @@ namespace MyCoffeeWebApp
     using System;
     using System.Collections.Generic;
     
-    public partial class sysdiagram
+    public partial class ALCOHOL_SPENDING_MONEY
     {
-        public string name { get; set; }
-        public int principal_id { get; set; }
-        public int diagram_id { get; set; }
-        public Nullable<int> version { get; set; }
-        public byte[] definition { get; set; }
+        public long ALCOHOL_SPENDING_MONEY___ID { get; set; }
+        public Nullable<System.DateTime> DATE_ID { get; set; }
+        public string ALCOHOL_SPENDING_MONEY___CONTENT { get; set; }
+        public double ALCOHOL_SPENDING_MONEY___QUANTITY { get; set; }
+        public string ALCOHOL_SPENDING_MONEY___NOTE { get; set; }
+    
+        public virtual DATE DATE { get; set; }
     }
 }
