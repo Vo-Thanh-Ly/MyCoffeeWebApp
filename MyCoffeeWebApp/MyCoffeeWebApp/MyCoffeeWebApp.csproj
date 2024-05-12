@@ -172,13 +172,14 @@
     <Compile Include="COLLECT_MONEY.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ALCOHOL_COLLECTS_MONEYController.cs" />
+    <Compile Include="Controllers\ALCOHOL_SPENDING_MONEYController.cs" />
     <Compile Include="Controllers\COLLECT_MONEYController.cs" />
     <Compile Include="Controllers\DATEsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MENUsController.cs" />
     <Compile Include="Controllers\SPENDING_MONEYController.cs" />
+    <Compile Include="Controllers\TYPE_OF_WINEController.cs" />
     <Compile Include="DATE.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -203,9 +204,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\IdentityModels.cs" />
-    <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SPENDING_MONEY.cs">
       <DependentUpon>Model1.tt</DependentUpon>
@@ -216,6 +214,81 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\assets\css\demo.css" />
+    <Content Include="Content\assets\img\avatars\1.png" />
+    <Content Include="Content\assets\img\avatars\5.png" />
+    <Content Include="Content\assets\img\avatars\6.png" />
+    <Content Include="Content\assets\img\avatars\7.png" />
+    <Content Include="Content\assets\img\backgrounds\18.jpg" />
+    <Content Include="Content\assets\img\elements\1.jpg" />
+    <Content Include="Content\assets\img\elements\11.jpg" />
+    <Content Include="Content\assets\img\elements\12.jpg" />
+    <Content Include="Content\assets\img\elements\13.jpg" />
+    <Content Include="Content\assets\img\elements\17.jpg" />
+    <Content Include="Content\assets\img\elements\18.jpg" />
+    <Content Include="Content\assets\img\elements\19.jpg" />
+    <Content Include="Content\assets\img\elements\2.jpg" />
+    <Content Include="Content\assets\img\elements\20.jpg" />
+    <Content Include="Content\assets\img\elements\3.jpg" />
+    <Content Include="Content\assets\img\elements\4.jpg" />
+    <Content Include="Content\assets\img\elements\5.jpg" />
+    <Content Include="Content\assets\img\elements\7.jpg" />
+    <Content Include="Content\assets\img\favicon\favicon.ico" />
+    <Content Include="Content\assets\img\icons\brands\asana.png" />
+    <Content Include="Content\assets\img\icons\brands\behance.png" />
+    <Content Include="Content\assets\img\icons\brands\dribbble.png" />
+    <Content Include="Content\assets\img\icons\brands\facebook.png" />
+    <Content Include="Content\assets\img\icons\brands\github.png" />
+    <Content Include="Content\assets\img\icons\brands\google.png" />
+    <Content Include="Content\assets\img\icons\brands\instagram.png" />
+    <Content Include="Content\assets\img\icons\brands\mailchimp.png" />
+    <Content Include="Content\assets\img\icons\brands\slack.png" />
+    <Content Include="Content\assets\img\icons\brands\twitter.png" />
+    <Content Include="Content\assets\img\icons\unicons\cc-primary.png" />
+    <Content Include="Content\assets\img\icons\unicons\cc-success.png" />
+    <Content Include="Content\assets\img\icons\unicons\cc-warning.png" />
+    <Content Include="Content\assets\img\icons\unicons\chart-success.png" />
+    <Content Include="Content\assets\img\icons\unicons\chart.png" />
+    <Content Include="Content\assets\img\icons\unicons\paypal.png" />
+    <Content Include="Content\assets\img\icons\unicons\wallet-info.png" />
+    <Content Include="Content\assets\img\icons\unicons\wallet.png" />
+    <Content Include="Content\assets\img\illustrations\girl-doing-yoga-light.png" />
+    <Content Include="Content\assets\img\illustrations\man-with-laptop-light.png" />
+    <Content Include="Content\assets\img\illustrations\page-misc-error-light.png" />
+    <Content Include="Content\assets\img\layouts\layout-container-light.png" />
+    <Content Include="Content\assets\img\layouts\layout-fluid-light.png" />
+    <Content Include="Content\assets\img\layouts\layout-without-menu-light.png" />
+    <Content Include="Content\assets\img\layouts\layout-without-navbar-light.png" />
+    <Content Include="Content\assets\js\config.js" />
+    <Content Include="Content\assets\js\dashboards-analytics.js" />
+    <Content Include="Content\assets\js\extended-ui-perfect-scrollbar.js" />
+    <Content Include="Content\assets\js\form-basic-inputs.js" />
+    <Content Include="Content\assets\js\main.js" />
+    <Content Include="Content\assets\js\pages-account-settings-account.js" />
+    <Content Include="Content\assets\js\ui-modals.js" />
+    <Content Include="Content\assets\js\ui-popover.js" />
+    <Content Include="Content\assets\js\ui-toasts.js" />
+    <Content Include="Content\assets\vendor\css\core.css" />
+    <Content Include="Content\assets\vendor\css\pages\page-account-settings.css" />
+    <Content Include="Content\assets\vendor\css\pages\page-auth.css" />
+    <Content Include="Content\assets\vendor\css\pages\page-icons.css" />
+    <Content Include="Content\assets\vendor\css\pages\page-misc.css" />
+    <Content Include="Content\assets\vendor\css\theme-default.css" />
+    <Content Include="Content\assets\vendor\fonts\boxicons.css" />
+    <Content Include="Content\assets\vendor\fonts\boxicons\boxicons.svg" />
+    <Content Include="Content\assets\vendor\js\bootstrap.js" />
+    <Content Include="Content\assets\vendor\js\helpers.js" />
+    <Content Include="Content\assets\vendor\js\menu.js" />
+    <Content Include="Content\assets\vendor\libs\apex-charts\apex-charts.css" />
+    <Content Include="Content\assets\vendor\libs\apex-charts\apexcharts.js" />
+    <Content Include="Content\assets\vendor\libs\highlight\highlight-github.css" />
+    <Content Include="Content\assets\vendor\libs\highlight\highlight.css" />
+    <Content Include="Content\assets\vendor\libs\highlight\highlight.js" />
+    <Content Include="Content\assets\vendor\libs\jquery\jquery.js" />
+    <Content Include="Content\assets\vendor\libs\masonry\masonry.js" />
+    <Content Include="Content\assets\vendor\libs\perfect-scrollbar\perfect-scrollbar.css" />
+    <Content Include="Content\assets\vendor\libs\perfect-scrollbar\perfect-scrollbar.js" />
+    <Content Include="Content\assets\vendor\libs\popper\popper.js" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-grid.rtl.css" />
@@ -280,6 +353,10 @@
     <Content Include="Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
     </Content>
+    <Content Include="Content\assets\vendor\fonts\boxicons\boxicons.eot" />
+    <Content Include="Content\assets\vendor\fonts\boxicons\boxicons.ttf" />
+    <Content Include="Content\assets\vendor\fonts\boxicons\boxicons.woff" />
+    <Content Include="Content\assets\vendor\fonts\boxicons\boxicons.woff2" />
     <None Include="Scripts\jquery-3.7.1.intellisense.js" />
     <Content Include="Scripts\chart.js" />
     <Content Include="Scripts\chart.min.js" />
@@ -306,39 +383,29 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
-    <Content Include="Views\Account\ConfirmEmail.cshtml" />
-    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
-    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
-    <Content Include="Views\Account\ForgotPassword.cshtml" />
-    <Content Include="Views\Account\ForgotPasswordConfirmation.cshtml" />
-    <Content Include="Views\Account\Login.cshtml" />
-    <Content Include="Views\Account\Register.cshtml" />
-    <Content Include="Views\Account\ResetPassword.cshtml" />
-    <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
-    <Content Include="Views\Account\SendCode.cshtml" />
-    <Content Include="Views\Account\VerifyCode.cshtml" />
-    <Content Include="Views\Manage\AddPhoneNumber.cshtml" />
-    <Content Include="Views\Manage\ChangePassword.cshtml" />
-    <Content Include="Views\Manage\Index.cshtml" />
-    <Content Include="Views\Manage\ManageLogins.cshtml" />
-    <Content Include="Views\Manage\SetPassword.cshtml" />
-    <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\DATEs\Create.cshtml" />
-    <Content Include="Views\DATEs\Delete.cshtml" />
-    <Content Include="Views\DATEs\Details.cshtml" />
-    <Content Include="Views\DATEs\Edit.cshtml" />
-    <Content Include="Views\DATEs\Index.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\ALCOHOL_COLLECTS_MONEY\Create.cshtml" />
+    <Content Include="Views\ALCOHOL_COLLECTS_MONEY\Delete.cshtml" />
+    <Content Include="Views\ALCOHOL_COLLECTS_MONEY\Details.cshtml" />
+    <Content Include="Views\ALCOHOL_COLLECTS_MONEY\Edit.cshtml" />
+    <Content Include="Views\ALCOHOL_COLLECTS_MONEY\Index.cshtml" />
+    <Content Include="Views\ALCOHOL_SPENDING_MONEY\Create.cshtml" />
+    <Content Include="Views\ALCOHOL_SPENDING_MONEY\Delete.cshtml" />
+    <Content Include="Views\ALCOHOL_SPENDING_MONEY\Details.cshtml" />
+    <Content Include="Views\ALCOHOL_SPENDING_MONEY\Edit.cshtml" />
+    <Content Include="Views\ALCOHOL_SPENDING_MONEY\Index.cshtml" />
     <Content Include="Views\COLLECT_MONEY\Create.cshtml" />
     <Content Include="Views\COLLECT_MONEY\Delete.cshtml" />
     <Content Include="Views\COLLECT_MONEY\Details.cshtml" />
     <Content Include="Views\COLLECT_MONEY\Edit.cshtml" />
     <Content Include="Views\COLLECT_MONEY\Index.cshtml" />
+    <Content Include="Views\DATEs\Create.cshtml" />
+    <Content Include="Views\DATEs\Delete.cshtml" />
+    <Content Include="Views\DATEs\Details.cshtml" />
+    <Content Include="Views\DATEs\Edit.cshtml" />
+    <Content Include="Views\DATEs\Index.cshtml" />
     <Content Include="Views\MENUs\Create.cshtml" />
     <Content Include="Views\MENUs\Delete.cshtml" />
     <Content Include="Views\MENUs\Details.cshtml" />
@@ -349,9 +416,16 @@
     <Content Include="Views\SPENDING_MONEY\Details.cshtml" />
     <Content Include="Views\SPENDING_MONEY\Edit.cshtml" />
     <Content Include="Views\SPENDING_MONEY\Index.cshtml" />
+    <Content Include="Views\TYPE_OF_WINE\Create.cshtml" />
+    <Content Include="Views\TYPE_OF_WINE\Delete.cshtml" />
+    <Content Include="Views\TYPE_OF_WINE\Details.cshtml" />
+    <Content Include="Views\TYPE_OF_WINE\Edit.cshtml" />
+    <Content Include="Views\TYPE_OF_WINE\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\assets\font\" />
+    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
