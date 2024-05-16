@@ -13,15 +13,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="DATEs">
-      <EntityTypeMapping TypeName="MyCoffeeWebAppModel.DATE">
-        <MappingFragment StoreEntitySet="DATE">
-          <ScalarProperty Name="note" ColumnName="note" />
-          <ScalarProperty Name="date_name" ColumnName="date_name" />
-          <ScalarProperty Name="DATE1" ColumnName="DATE" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="MENUs">
       <EntityTypeMapping TypeName="MyCoffeeWebAppModel.MENU">
         <MappingFragment StoreEntitySet="MENU">
@@ -71,6 +62,15 @@
           <ScalarProperty Name="TYPE_OF_WINE___PRICE" ColumnName="TYPE_OF_WINE___PRICE" />
           <ScalarProperty Name="TYPE_OF_WINE___NAME" ColumnName="TYPE_OF_WINE___NAME" />
           <ScalarProperty Name="TYPE_OF_WINE___ID" ColumnName="TYPE_OF_WINE___ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DATEs">
+      <EntityTypeMapping TypeName="MyCoffeeWebAppModel.DATE">
+        <MappingFragment StoreEntitySet="DATE">
+          <ScalarProperty Name="note" ColumnName="note" />
+          <ScalarProperty Name="date_name" ColumnName="date_name" />
+          <ScalarProperty Name="DATE1" ColumnName="DATE" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

@@ -49,6 +49,9 @@
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.4.1.0\lib\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -166,20 +169,12 @@
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
-    <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="COLLECT_MONEY.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Controllers\ALCOHOL_COLLECTS_MONEYController.cs" />
-    <Compile Include="Controllers\ALCOHOL_SPENDING_MONEYController.cs" />
-    <Compile Include="Controllers\COLLECT_MONEYController.cs" />
     <Compile Include="Controllers\DATEsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\MENUsController.cs" />
-    <Compile Include="Controllers\SPENDING_MONEYController.cs" />
-    <Compile Include="Controllers\TYPE_OF_WINEController.cs" />
     <Compile Include="DATE.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -214,6 +209,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\assets\css\css2.css" />
     <Content Include="Content\assets\css\demo.css" />
     <Content Include="Content\assets\img\avatars\1.png" />
     <Content Include="Content\assets\img\avatars\5.png" />
@@ -263,6 +259,7 @@
     <Content Include="Content\assets\js\dashboards-analytics.js" />
     <Content Include="Content\assets\js\extended-ui-perfect-scrollbar.js" />
     <Content Include="Content\assets\js\form-basic-inputs.js" />
+    <Content Include="Content\assets\js\BUTTONS.js" />
     <Content Include="Content\assets\js\main.js" />
     <Content Include="Content\assets\js\pages-account-settings-account.js" />
     <Content Include="Content\assets\js\ui-modals.js" />
@@ -386,45 +383,14 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\ALCOHOL_COLLECTS_MONEY\Create.cshtml" />
-    <Content Include="Views\ALCOHOL_COLLECTS_MONEY\Delete.cshtml" />
-    <Content Include="Views\ALCOHOL_COLLECTS_MONEY\Details.cshtml" />
-    <Content Include="Views\ALCOHOL_COLLECTS_MONEY\Edit.cshtml" />
-    <Content Include="Views\ALCOHOL_COLLECTS_MONEY\Index.cshtml" />
-    <Content Include="Views\ALCOHOL_SPENDING_MONEY\Create.cshtml" />
-    <Content Include="Views\ALCOHOL_SPENDING_MONEY\Delete.cshtml" />
-    <Content Include="Views\ALCOHOL_SPENDING_MONEY\Details.cshtml" />
-    <Content Include="Views\ALCOHOL_SPENDING_MONEY\Edit.cshtml" />
-    <Content Include="Views\ALCOHOL_SPENDING_MONEY\Index.cshtml" />
-    <Content Include="Views\COLLECT_MONEY\Create.cshtml" />
-    <Content Include="Views\COLLECT_MONEY\Delete.cshtml" />
-    <Content Include="Views\COLLECT_MONEY\Details.cshtml" />
-    <Content Include="Views\COLLECT_MONEY\Edit.cshtml" />
-    <Content Include="Views\COLLECT_MONEY\Index.cshtml" />
     <Content Include="Views\DATEs\Create.cshtml" />
     <Content Include="Views\DATEs\Delete.cshtml" />
     <Content Include="Views\DATEs\Details.cshtml" />
     <Content Include="Views\DATEs\Edit.cshtml" />
     <Content Include="Views\DATEs\Index.cshtml" />
-    <Content Include="Views\MENUs\Create.cshtml" />
-    <Content Include="Views\MENUs\Delete.cshtml" />
-    <Content Include="Views\MENUs\Details.cshtml" />
-    <Content Include="Views\MENUs\Edit.cshtml" />
-    <Content Include="Views\MENUs\Index.cshtml" />
-    <Content Include="Views\SPENDING_MONEY\Create.cshtml" />
-    <Content Include="Views\SPENDING_MONEY\Delete.cshtml" />
-    <Content Include="Views\SPENDING_MONEY\Details.cshtml" />
-    <Content Include="Views\SPENDING_MONEY\Edit.cshtml" />
-    <Content Include="Views\SPENDING_MONEY\Index.cshtml" />
-    <Content Include="Views\TYPE_OF_WINE\Create.cshtml" />
-    <Content Include="Views\TYPE_OF_WINE\Delete.cshtml" />
-    <Content Include="Views\TYPE_OF_WINE\Details.cshtml" />
-    <Content Include="Views\TYPE_OF_WINE\Edit.cshtml" />
-    <Content Include="Views\TYPE_OF_WINE\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\assets\font\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>

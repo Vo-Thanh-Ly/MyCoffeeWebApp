@@ -36,7 +36,7 @@
       <PropertyRef Name="DATE" />
     </Key>
     <Property Name="DATE" Type="date" Nullable="false" />
-    <Property Name="date_name" Type="date" />
+    <Property Name="date_name" Type="nvarchar" MaxLength="150" />
     <Property Name="note" Type="nvarchar" MaxLength="1000" />
   </EntityType>
   <EntityType Name="MENU">

@@ -21,7 +21,7 @@ namespace MyCoffeeWebApp
         public long CLMN_PRICE { get; set; }
         public string CLMN_NOTE { get; set; }
     
-        public virtual DATE DATE1 { get; set; }
         public virtual MENU MENU { get; set; }
+        public virtual DATE DATE1 { get; set; }
     }
 }

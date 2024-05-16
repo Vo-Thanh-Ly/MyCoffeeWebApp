@@ -20,7 +20,7 @@ namespace MyCoffeeWebApp
         public long ALCOHOL_COLLECTS_MONEY___PRICE { get; set; }
         public string ALCOHOL_COLLECTS_MONEY___ID { get; set; }
     
-        public virtual DATE DATE { get; set; }
         public virtual TYPE_OF_WINE TYPE_OF_WINE { get; set; }
+        public virtual DATE DATE { get; set; }
     }
 }

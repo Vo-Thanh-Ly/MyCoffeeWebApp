@@ -8,6 +8,8 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using MyCoffeeWebApp;
+using PagedList;
+using System.Web.UI;
 
 namespace MyCoffeeWebApp.Controllers
 {
@@ -16,9 +18,12 @@ namespace MyCoffeeWebApp.Controllers
         private MyCoffeeWebAppEntities db = new MyCoffeeWebAppEntities();
 
         // GET: DATEs
-        public async Task<ActionResult> Index()
+        public async Task<ActionResult> Index(int? page)
         {
-            return View(await db.DATEs.ToListAsync());
+            int pageSize = 20;
+            int pageNumber = (page ?? 1);
+            var pagaPage = db.DATEs.OrderByDescending(d => d.DATE1).ToPagedList(pageNumber, pageSize);
+            return View(pagaPage);
         }
 
         // GET: DATEs/Details/5
@@ -60,18 +65,25 @@ namespace MyCoffeeWebApp.Controllers
         }
 
         // GET: DATEs/Edit/5
-        public async Task<ActionResult> Edit(DateTime id)
+
+        public async Task<ActionResult> Edit(string id)
         {
-            if (id == null)
+            if (string.IsNullOrEmpty(id))
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            DATE dATE = await db.DATEs.FindAsync(id);
-            if (dATE == null)
+
+            if (!DateTime.TryParse(id, out DateTime dATE))
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+
+            DATE modelv = await db.DATEs.FindAsync(dATE);
+            if (modelv == null)
             {
                 return HttpNotFound();
             }
-            return View(dATE);
+            return View(modelv);
         }
 
         // POST: DATEs/Edit/5

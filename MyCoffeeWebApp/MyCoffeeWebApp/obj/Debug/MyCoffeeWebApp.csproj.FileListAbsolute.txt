@@ -88,3 +88,5 @@ D:\cá nhân\MyCoffeeWebApp\MyCoffeeWebApp\MyCoffeeWebApp\obj\Debug\MyCoffeeWebA
 D:\cá nhân\MyCoffeeWebApp\MyCoffeeWebApp\MyCoffeeWebApp\obj\Debug\MyCoffee.366EE2C6.Up2Date
 D:\cá nhân\MyCoffeeWebApp\MyCoffeeWebApp\MyCoffeeWebApp\obj\Debug\MyCoffeeWebApp.dll
 D:\cá nhân\MyCoffeeWebApp\MyCoffeeWebApp\MyCoffeeWebApp\obj\Debug\MyCoffeeWebApp.pdb
+D:\cá nhân\MyCoffeeWebApp\MyCoffeeWebApp\MyCoffeeWebApp\bin\PagedList.dll
+D:\cá nhân\MyCoffeeWebApp\MyCoffeeWebApp\MyCoffeeWebApp\bin\PagedList.xml
