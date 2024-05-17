@@ -5,37 +5,40 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Delete</h2>
-
-<h3>Are you sure you want to delete this?</h3>
+<h3>Bạn có muốn xóa ngày này?</h3>
 <div>
-    <h4>DATE</h4>
+    
     <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.date_name)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.date_name)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.note)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.note)
-        </dd>
-
+    <dl class="row mb-3">
+        <dt class="col-sm-3 col-col-label">Ngày:</dt>
+        <dd class="col-sm-9">@Html.DisplayFor(model => model.DATE1)</dd>
+        <dt class="col-sm-3 col-col-label">Gợi nhớ ngày:</dt>
+        <dd class="col-sm-9">@Html.DisplayFor(model => model.date_name)</dd>
+        <dt class="col-sm-3 col-col-label">Ghi chú:</dt>
+        <dd class="col-sm-9">@Html.DisplayFor(model => model.note)</dd>
     </dl>
 
-    @using (Html.BeginForm()) {
+    @using (Html.BeginForm())
+    {
         @Html.AntiForgeryToken()
 
-        <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
+        <div class="card mb-4">
+            <h5 class="card-header">Xác nhận xóa ngày</h5>
+            <div class="card-body">
+                <div class="d-flex justify-content-center mt-3">
+                    <input onclick="return confirm('Bạn có chắc chắn muốn xóa không?')" type="submit" value="Delete" class="btn btn-danger" /> |
+
+                    @Html.ActionLink("Cancel", "Index", null, new { @class = "btn btn-primary" })
+                </div>
+            </div>
         </div>
     }
 </div>
+
+
+<script>
+    var ulNgayVaGiaCa = document.getElementById("NgayVaGiaCa");
+    ulNgayVaGiaCa.classList.add("d-block");
+    var liNgay = document.getElementById("Ngay");
+    liNgay.classList.add("active");
+</script>

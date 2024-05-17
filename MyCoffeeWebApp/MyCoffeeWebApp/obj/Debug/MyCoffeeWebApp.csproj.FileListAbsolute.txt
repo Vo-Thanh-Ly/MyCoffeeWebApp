@@ -90,3 +90,6 @@ D:\cá nhân\MyCoffeeWebApp\MyCoffeeWebApp\MyCoffeeWebApp\obj\Debug\MyCoffeeWebA
 D:\cá nhân\MyCoffeeWebApp\MyCoffeeWebApp\MyCoffeeWebApp\obj\Debug\MyCoffeeWebApp.pdb
 D:\cá nhân\MyCoffeeWebApp\MyCoffeeWebApp\MyCoffeeWebApp\bin\PagedList.dll
 D:\cá nhân\MyCoffeeWebApp\MyCoffeeWebApp\MyCoffeeWebApp\bin\PagedList.xml
+D:\cá nhân\MyCoffeeWebApp\MyCoffeeWebApp\MyCoffeeWebApp\bin\PagedList.Mvc.dll
+D:\cá nhân\MyCoffeeWebApp\MyCoffeeWebApp\MyCoffeeWebApp\bin\PagedList.Mvc.xml
+D:\cá nhân\MyCoffeeWebApp\MyCoffeeWebApp\MyCoffeeWebApp\bin\X.PagedList.dll

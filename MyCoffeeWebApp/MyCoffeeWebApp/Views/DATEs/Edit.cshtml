@@ -5,44 +5,55 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Edit</h2>
-
-
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
-    <div class="form-horizontal">
-        <h4>DATE</h4>
-        <hr />
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        @Html.HiddenFor(model => model.DATE1)
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.date_name, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.date_name, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.date_name, "", new { @class = "text-danger" })
+
+    <div class="card mb-4">
+        <h5 class="card-header">Sửa ngày</h5>
+        <div class="card-body">
+                    @Html.HiddenFor(model => model.DATE1, new { htmlAttributes = new { @class = "form-control", @type = "date" } })
+                    @Html.ValidationMessageFor(model => model.DATE1, "", new { @class = "text-danger" })
+             
+
+
+            <div class="mb-3 row">
+                @Html.LabelFor(model => model.date_name, htmlAttributes: new { @class = "col-md-2 col-form-label" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.date_name, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.date_name, "", new { @class = "text-danger" })
+                </div>
             </div>
-        </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.note, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.note, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.note, "", new { @class = "text-danger" })
+            <div class="mb-3 row">
+                @Html.LabelFor(model => model.note, htmlAttributes: new { @class = "col-md-2 col-form-label" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.note, new { htmlAttributes = new { @class = "form-control", @type = "textarea" } })
+                    @Html.ValidationMessageFor(model => model.date_name, "", new { @class = "text-danger" })
+                </div>
             </div>
-        </div>
 
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Save" class="btn btn-default" />
+            <div class="form-group">
+                <div class="d-flex justify-content-center mt-3">
+                    <input type="submit" value="Save" class="btn btn-info" />
+                </div>
+            </div>
+            <div class="d-flex justify-content-center mt-3">
+                @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-primary" })
             </div>
         </div>
     </div>
+
+
+
+
+
 }
 
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>
-
+<script>
+    var ulNgayVaGiaCa = document.getElementById("NgayVaGiaCa");
+    ulNgayVaGiaCa.classList.add("d-block");
+    var liNgay = document.getElementById("Ngay");
+    liNgay.classList.add("active");
+</script>

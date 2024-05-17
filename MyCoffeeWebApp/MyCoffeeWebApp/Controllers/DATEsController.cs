@@ -20,7 +20,7 @@ namespace MyCoffeeWebApp.Controllers
         // GET: DATEs
         public async Task<ActionResult> Index(int? page)
         {
-            int pageSize = 20;
+            int pageSize = 5;
             int pageNumber = (page ?? 1);
             var pagaPage = db.DATEs.OrderByDescending(d => d.DATE1).ToPagedList(pageNumber, pageSize);
             return View(pagaPage);
@@ -56,6 +56,13 @@ namespace MyCoffeeWebApp.Controllers
         {
             if (ModelState.IsValid)
             {
+                var exist = db.DATEs.Find(dATE.DATE1);
+                if (exist != null)
+                {
+                    ModelState.AddModelError(string.Empty, "Ngày đx=ã tồn tại vui lòng chọn ngày khác.");
+                    
+                    return View(dATE);
+                }
                 db.DATEs.Add(dATE);
                 await db.SaveChangesAsync();
                 return RedirectToAction("Index");
