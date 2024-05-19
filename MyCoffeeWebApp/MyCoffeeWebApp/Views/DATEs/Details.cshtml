@@ -9,12 +9,12 @@
 
 <div class="card mb-3">
     <div class="card-header">
-        <h4>@Html.DisplayNameFor(model => model.DATE1)</h4>
+        <h4>@Html.DisplayNameFor(model => model.DATE_ID)</h4>
     </div>
     <div class="card-body">
         <dl class="row">
-            <dt class="col-sm-3 col-col-label">@Html.DisplayNameFor(model => model.DATE1)</dt>
-            <dd class="col-sm-9">@Html.DisplayFor(model => model.DATE1)</dd>
+            <dt class="col-sm-3 col-col-label">@Html.DisplayNameFor(model => model.DATE_ID)</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.DATE_ID)</dd>
             <dt class="col-sm-3 col-col-label">@Html.DisplayNameFor(model => model.date_name)</dt>
             <dd class="col-sm-9">@Html.DisplayFor(model => model.date_name)</dd>
             <dt class="col-sm-3 col-col-label">@Html.DisplayNameFor(model => model.note)</dt>
@@ -24,7 +24,7 @@
 </div>
 
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.DATE1.ToString("MM-dd-yyyy") }) |
+    @Html.ActionLink("Edit", "Edit", new { id = Model.DATE_ID.ToString("MM-dd-yyyy") }) |
     @Html.ActionLink("Back to List", "Index")
 </p>
 
@@ -33,4 +33,5 @@
     ulNgayVaGiaCa.classList.add("d-block");
     var liNgay = document.getElementById("Ngay");
     liNgay.classList.add("active");
+    document.getElementById('searchInputBox').classList.add("d-none")
 </script>

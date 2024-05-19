@@ -11,7 +11,7 @@
     <hr />
     <dl class="row mb-3">
         <dt class="col-sm-3 col-col-label">Ngày:</dt>
-        <dd class="col-sm-9">@Html.DisplayFor(model => model.DATE1)</dd>
+        <dd class="col-sm-9">@Html.DisplayFor(model => model.DATE_ID)</dd>
         <dt class="col-sm-3 col-col-label">Gợi nhớ ngày:</dt>
         <dd class="col-sm-9">@Html.DisplayFor(model => model.date_name)</dd>
         <dt class="col-sm-3 col-col-label">Ghi chú:</dt>
@@ -41,4 +41,5 @@
     ulNgayVaGiaCa.classList.add("d-block");
     var liNgay = document.getElementById("Ngay");
     liNgay.classList.add("active");
+    document.getElementById('searchInputBox').classList.add("d-none")
 </script>

@@ -4,20 +4,21 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="5bfc08dd799d4d85980732fb518bce6b" Name="Diagram1">
-        <EntityTypeShape EntityType="MyCoffeeWebAppModel.COLLECT_MONEY" Width="1.5" PointX="3.375" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="MyCoffeeWebAppModel.MENU" Width="1.5" PointX="3.375" PointY="0.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="MyCoffeeWebAppModel.SPENDING_MONEY" Width="1.5" PointX="3.5" PointY="8" IsExpanded="true" />
-        <AssociationConnector Association="MyCoffeeWebAppModel.FK_COLLECT__RELATIONS_MENU" ManuallyRouted="false" />
-        <EntityTypeShape EntityType="MyCoffeeWebAppModel.ALCOHOL_COLLECTS_MONEY" Width="1.5" PointX="10.125" PointY="3.75" />
-        <EntityTypeShape EntityType="MyCoffeeWebAppModel.ALCOHOL_SPENDING_MONEY" Width="1.5" PointX="9.875" PointY="8.375" />
-        <EntityTypeShape EntityType="MyCoffeeWebAppModel.TYPE_OF_WINE" Width="1.5" PointX="10" PointY="0.5" />
-        <AssociationConnector Association="MyCoffeeWebAppModel.FK_AlcoholCollectsMoney_TypeOfWine" />
-        <EntityTypeShape EntityType="MyCoffeeWebAppModel.DATE" Width="1.5" PointX="6.375" PointY="4" />
-        <AssociationConnector Association="MyCoffeeWebAppModel.FK_AlcoholCollectsMoney_date" />
-        <AssociationConnector Association="MyCoffeeWebAppModel.FK_ALCOHOL_SPENDING_MONEY_date" />
-        <AssociationConnector Association="MyCoffeeWebAppModel.FK_COLLECT__RELATIONS_DATE" />
-        <AssociationConnector Association="MyCoffeeWebAppModel.FK_SPENDING_RELATIONS_DATE" />
+      <Diagram DiagramId="5bfc08dd799d4d85980732fb518bce6b" Name="Diagram1" ZoomLevel="66">
+        <EntityTypeShape EntityType="MyCoffeeWebAppModel.ALCOHOL_COLLECTS_MONEY" Width="1.5" PointX="6" PointY="6.125" />
+        <EntityTypeShape EntityType="MyCoffeeWebAppModel.ALCOHOL_SPENDING_MONEY" Width="1.5" PointX="3" PointY="14.125" />
+        <EntityTypeShape EntityType="MyCoffeeWebAppModel.COLLECT_MONEY" Width="1.5" PointX="3" PointY="8" />
+        <EntityTypeShape EntityType="MyCoffeeWebAppModel.DATE" Width="1.5" PointX="0.75" PointY="6.125" />
+        <EntityTypeShape EntityType="MyCoffeeWebAppModel.MENU" Width="1.5" PointX="0.75" PointY="9.375" />
+        <EntityTypeShape EntityType="MyCoffeeWebAppModel.SPENDING_MONEY" Width="1.5" PointX="3" PointY="4.625" />
+        <EntityTypeShape EntityType="MyCoffeeWebAppModel.sysdiagram" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="MyCoffeeWebAppModel.TYPE_OF_WINE" Width="1.5" PointX="3.75" PointY="1.375" />
+        <AssociationConnector Association="MyCoffeeWebAppModel.FK__ALCOHOL_C__DATE___30F848ED" />
+        <AssociationConnector Association="MyCoffeeWebAppModel.FK__ALCOHOL_C__TYPE___31EC6D26" />
+        <AssociationConnector Association="MyCoffeeWebAppModel.FK__ALCOHOL_S__DATE___37A5467C" />
+        <AssociationConnector Association="MyCoffeeWebAppModel.FK__COLLECT_M__DATE___2A4B4B5E" />
+        <AssociationConnector Association="MyCoffeeWebAppModel.FK__COLLECT_M__MN_ID__2B3F6F97" />
+        <AssociationConnector Association="MyCoffeeWebAppModel.FK__SPENDING_M__DATE__2E1BDC42" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

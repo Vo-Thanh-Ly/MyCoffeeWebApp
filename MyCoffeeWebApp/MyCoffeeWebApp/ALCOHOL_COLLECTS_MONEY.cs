@@ -14,13 +14,13 @@ namespace MyCoffeeWebApp
     
     public partial class ALCOHOL_COLLECTS_MONEY
     {
-        public double ALCOHOL_COLLECTS_MONEY___QUANTITY { get; set; }
+        public double ALCOHOL_COLLECTS_MONEY_QUANTITY { get; set; }
         public Nullable<System.DateTime> DATE_ID { get; set; }
-        public string TYPE_OF_WINE___ID { get; set; }
-        public long ALCOHOL_COLLECTS_MONEY___PRICE { get; set; }
-        public string ALCOHOL_COLLECTS_MONEY___ID { get; set; }
+        public Nullable<int> TYPE_OF_WINE_ID { get; set; }
+        public long ALCOHOL_COLLECTS_MONEY_PRICE { get; set; }
+        public string ALCOHOL_COLLECTS_MONEY_ID { get; set; }
     
-        public virtual TYPE_OF_WINE TYPE_OF_WINE { get; set; }
         public virtual DATE DATE { get; set; }
+        public virtual TYPE_OF_WINE TYPE_OF_WINE { get; set; }
     }
 }

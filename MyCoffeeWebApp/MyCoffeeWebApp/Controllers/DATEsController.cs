@@ -18,17 +18,36 @@ namespace MyCoffeeWebApp.Controllers
         private MyCoffeeWebAppEntities db = new MyCoffeeWebAppEntities();
 
         // GET: DATEs
-        public async Task<ActionResult> Index(int? page)
+        public ActionResult Index(string str, int? page)
         {
             int pageSize = 5;
-            int pageNumber = (page ?? 1);
-            var pagaPage = db.DATEs.OrderByDescending(d => d.DATE1).ToPagedList(pageNumber, pageSize);
+            int pageNumber = page ?? 1;
+            var pagaPage = Enumerable.Empty<DATE>().ToPagedList(pageNumber, pageSize);
+
+            if (!string.IsNullOrEmpty(str))
+            {
+                // Chuyển str sang kiểu hoa hoặc kiểu thường trước khi so sánh
+                str = str.ToUpper();
+                pagaPage = db.DATEs.Where(d => d.date_name.ToUpper().Contains(str))
+                                    .OrderByDescending(d => d.DATE_ID)
+                                    .ToPagedList(pageNumber, pageSize);
+            }
+            else
+            {
+                // Hiển thị tất cả các bản ghi nếu str rỗng
+                pagaPage = db.DATEs.OrderByDescending(d => d.DATE_ID)
+                                    .ToPagedList(pageNumber, pageSize);
+            }
+
             return View(pagaPage);
         }
+
 
         // GET: DATEs/Details/5
         public async Task<ActionResult> Details(DateTime id)
         {
+
+
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -52,15 +71,15 @@ namespace MyCoffeeWebApp.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Create([Bind(Include = "DATE1,date_name,note")] DATE dATE)
+        public async Task<ActionResult> Create([Bind(Include = "DATE_ID,date_name,note")] DATE dATE)
         {
             if (ModelState.IsValid)
             {
-                var exist = db.DATEs.Find(dATE.DATE1);
+                var exist = db.DATEs.Find(dATE.DATE_ID);
                 if (exist != null)
                 {
-                    ModelState.AddModelError(string.Empty, "Ngày đx=ã tồn tại vui lòng chọn ngày khác.");
-                    
+                    ModelState.AddModelError(string.Empty, "Ngày đã tồn tại vui lòng chọn ngày khác.");
+
                     return View(dATE);
                 }
                 db.DATEs.Add(dATE);
@@ -134,6 +153,8 @@ namespace MyCoffeeWebApp.Controllers
             await db.SaveChangesAsync();
             return RedirectToAction("Index");
         }
+
+
 
         protected override void Dispose(bool disposing)
         {

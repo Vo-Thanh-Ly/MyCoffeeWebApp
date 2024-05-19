@@ -1,0 +1,50 @@
+﻿@model MyCoffeeWebApp.ALCOHOL_SPENDING_MONEY
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div>
+    <h4>Chi tiền</h4>
+    <hr />
+    <div class="card mb-3">
+        <dl class="row">
+            <dt class="col-sm-4 col-col-label">
+                @Html.DisplayNameFor(model => model.ALCOHOL_SPENDING_MONEY_CONTENT)
+            </dt>
+
+            <dd class="col-sm-9">
+                @Html.DisplayFor(model => model.ALCOHOL_SPENDING_MONEY_CONTENT)
+            </dd>
+
+            <dt class="col-sm-4 col-col-label">
+                @Html.DisplayNameFor(model => model.ALCOHOL_SPENDING_MONEY_QUANTITY)
+            </dt>
+
+            <dd class="col-sm-9">
+                @Html.DisplayFor(model => model.ALCOHOL_SPENDING_MONEY_QUANTITY)
+            </dd>
+
+            <dt class="col-sm-4 col-col-label">
+                @Html.DisplayNameFor(model => model.ALCOHOL_SPENDING_MONEY_NOTE)
+            </dt>
+
+            <dd class="col-sm-9">
+                @Html.DisplayFor(model => model.ALCOHOL_SPENDING_MONEY_NOTE)
+            </dd>
+
+            <dt class="col-sm-4 col-col-label">
+                @Html.DisplayNameFor(model => model.DATE.DATE_ID)
+            </dt>
+
+            <dd class="col-sm-9">
+                @Html.DisplayFor(model => model.DATE_ID)
+            </dd>
+
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.ALCOHOL_SPENDING_MONEY_ID }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>

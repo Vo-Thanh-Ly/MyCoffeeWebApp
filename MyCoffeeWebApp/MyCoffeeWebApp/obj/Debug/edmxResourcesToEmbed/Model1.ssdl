@@ -2,40 +2,40 @@
 <Schema Namespace="MyCoffeeWebAppModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <EntityType Name="ALCOHOL_COLLECTS_MONEY">
     <Key>
-      <PropertyRef Name="ALCOHOL_COLLECTS_MONEY___ID" />
+      <PropertyRef Name="ALCOHOL_COLLECTS_MONEY_ID" />
     </Key>
-    <Property Name="ALCOHOL_COLLECTS_MONEY___QUANTITY" Type="float" Nullable="false" />
+    <Property Name="ALCOHOL_COLLECTS_MONEY_QUANTITY" Type="float" Nullable="false" />
     <Property Name="DATE_ID" Type="date" />
-    <Property Name="TYPE_OF_WINE___ID" Type="nvarchar" MaxLength="50" Nullable="false" />
-    <Property Name="ALCOHOL_COLLECTS_MONEY___PRICE" Type="bigint" Nullable="false" />
-    <Property Name="ALCOHOL_COLLECTS_MONEY___ID" Type="char" MaxLength="20" Nullable="false" />
+    <Property Name="TYPE_OF_WINE_ID" Type="int" />
+    <Property Name="ALCOHOL_COLLECTS_MONEY_PRICE" Type="bigint" Nullable="false" />
+    <Property Name="ALCOHOL_COLLECTS_MONEY_ID" Type="char" MaxLength="20" Nullable="false" />
   </EntityType>
   <EntityType Name="ALCOHOL_SPENDING_MONEY">
     <Key>
-      <PropertyRef Name="ALCOHOL_SPENDING_MONEY___ID" />
+      <PropertyRef Name="ALCOHOL_SPENDING_MONEY_ID" />
     </Key>
-    <Property Name="ALCOHOL_SPENDING_MONEY___ID" Type="bigint" Nullable="false" />
+    <Property Name="ALCOHOL_SPENDING_MONEY_ID" Type="bigint" Nullable="false" />
     <Property Name="DATE_ID" Type="date" />
-    <Property Name="ALCOHOL_SPENDING_MONEY___CONTENT" Type="varchar" MaxLength="200" Nullable="false" />
-    <Property Name="ALCOHOL_SPENDING_MONEY___QUANTITY" Type="float" Nullable="false" />
-    <Property Name="ALCOHOL_SPENDING_MONEY___NOTE" Type="varchar" MaxLength="300" />
+    <Property Name="ALCOHOL_SPENDING_MONEY_CONTENT" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="ALCOHOL_SPENDING_MONEY_QUANTITY" Type="float" Nullable="false" />
+    <Property Name="ALCOHOL_SPENDING_MONEY_NOTE" Type="varchar" MaxLength="300" />
   </EntityType>
   <EntityType Name="COLLECT_MONEY">
     <Key>
       <PropertyRef Name="CLMN_ID" />
     </Key>
     <Property Name="CLMN_ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="DATE" Type="date" Nullable="false" />
-    <Property Name="MN_ID" Type="int" Nullable="false" />
+    <Property Name="DATE_ID" Type="date" />
+    <Property Name="MN_ID" Type="int" />
     <Property Name="CLMN_QUANLITY" Type="int" Nullable="false" />
     <Property Name="CLMN_PRICE" Type="bigint" Nullable="false" />
     <Property Name="CLMN_NOTE" Type="nvarchar" MaxLength="300" />
   </EntityType>
   <EntityType Name="DATE">
     <Key>
-      <PropertyRef Name="DATE" />
+      <PropertyRef Name="DATE_ID" />
     </Key>
-    <Property Name="DATE" Type="date" Nullable="false" />
+    <Property Name="DATE_ID" Type="date" Nullable="false" />
     <Property Name="date_name" Type="nvarchar" MaxLength="150" />
     <Property Name="note" Type="nvarchar" MaxLength="1000" />
   </EntityType>
@@ -52,76 +52,86 @@
       <PropertyRef Name="SPENDING_ID" />
     </Key>
     <Property Name="SPENDING_ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="DATE" Type="date" Nullable="false" />
+    <Property Name="DATE" Type="date" />
     <Property Name="SPENDING_CONTENT" Type="nvarchar" MaxLength="150" Nullable="false" />
     <Property Name="SPENDING_QUANLITY" Type="int" Nullable="false" />
     <Property Name="SPENDING_PRICE" Type="bigint" Nullable="false" />
     <Property Name="SPENDING_NOTE" Type="varchar" MaxLength="150" />
   </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
   <EntityType Name="TYPE_OF_WINE">
     <Key>
-      <PropertyRef Name="TYPE_OF_WINE___ID" />
+      <PropertyRef Name="TYPE_OF_WINE_ID" />
     </Key>
-    <Property Name="TYPE_OF_WINE___ID" Type="nvarchar" MaxLength="50" Nullable="false" />
-    <Property Name="TYPE_OF_WINE___NAME" Type="varchar" MaxLength="150" Nullable="false" />
-    <Property Name="TYPE_OF_WINE___PRICE" Type="bigint" Nullable="false" />
+    <Property Name="TYPE_OF_WINE_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TYPE_OF_WINE_NAME" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="TYPE_OF_WINE_PRICE" Type="bigint" Nullable="false" />
   </EntityType>
-  <Association Name="FK_ALCOHOL_SPENDING_MONEY_date">
+  <Association Name="FK__ALCOHOL_C__DATE___30F848ED">
+    <End Role="DATE" Type="Self.DATE" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ALCOHOL_COLLECTS_MONEY" Type="Self.ALCOHOL_COLLECTS_MONEY" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DATE">
+        <PropertyRef Name="DATE_ID" />
+      </Principal>
+      <Dependent Role="ALCOHOL_COLLECTS_MONEY">
+        <PropertyRef Name="DATE_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ALCOHOL_C__TYPE___31EC6D26">
+    <End Role="TYPE_OF_WINE" Type="Self.TYPE_OF_WINE" Multiplicity="0..1" />
+    <End Role="ALCOHOL_COLLECTS_MONEY" Type="Self.ALCOHOL_COLLECTS_MONEY" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TYPE_OF_WINE">
+        <PropertyRef Name="TYPE_OF_WINE_ID" />
+      </Principal>
+      <Dependent Role="ALCOHOL_COLLECTS_MONEY">
+        <PropertyRef Name="TYPE_OF_WINE_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ALCOHOL_S__DATE___37A5467C">
     <End Role="DATE" Type="Self.DATE" Multiplicity="0..1">
       <OnDelete Action="Cascade" />
     </End>
     <End Role="ALCOHOL_SPENDING_MONEY" Type="Self.ALCOHOL_SPENDING_MONEY" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="DATE">
-        <PropertyRef Name="DATE" />
+        <PropertyRef Name="DATE_ID" />
       </Principal>
       <Dependent Role="ALCOHOL_SPENDING_MONEY">
         <PropertyRef Name="DATE_ID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_AlcoholCollectsMoney_date">
+  <Association Name="FK__COLLECT_M__DATE___2A4B4B5E">
     <End Role="DATE" Type="Self.DATE" Multiplicity="0..1">
-      <OnDelete Action="Cascade" />
-    </End>
-    <End Role="ALCOHOL_COLLECTS_MONEY" Type="Self.ALCOHOL_COLLECTS_MONEY" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="DATE">
-        <PropertyRef Name="DATE" />
-      </Principal>
-      <Dependent Role="ALCOHOL_COLLECTS_MONEY">
-        <PropertyRef Name="DATE_ID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_AlcoholCollectsMoney_TypeOfWine">
-    <End Role="TYPE_OF_WINE" Type="Self.TYPE_OF_WINE" Multiplicity="1" />
-    <End Role="ALCOHOL_COLLECTS_MONEY" Type="Self.ALCOHOL_COLLECTS_MONEY" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="TYPE_OF_WINE">
-        <PropertyRef Name="TYPE_OF_WINE___ID" />
-      </Principal>
-      <Dependent Role="ALCOHOL_COLLECTS_MONEY">
-        <PropertyRef Name="TYPE_OF_WINE___ID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_COLLECT__RELATIONS_DATE">
-    <End Role="DATE" Type="Self.DATE" Multiplicity="1">
       <OnDelete Action="Cascade" />
     </End>
     <End Role="COLLECT_MONEY" Type="Self.COLLECT_MONEY" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="DATE">
-        <PropertyRef Name="DATE" />
+        <PropertyRef Name="DATE_ID" />
       </Principal>
       <Dependent Role="COLLECT_MONEY">
-        <PropertyRef Name="DATE" />
+        <PropertyRef Name="DATE_ID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_COLLECT__RELATIONS_MENU">
-    <End Role="MENU" Type="Self.MENU" Multiplicity="1" />
+  <Association Name="FK__COLLECT_M__MN_ID__2B3F6F97">
+    <End Role="MENU" Type="Self.MENU" Multiplicity="0..1" />
     <End Role="COLLECT_MONEY" Type="Self.COLLECT_MONEY" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="MENU">
@@ -132,14 +142,14 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_SPENDING_RELATIONS_DATE">
-    <End Role="DATE" Type="Self.DATE" Multiplicity="1">
+  <Association Name="FK__SPENDING_M__DATE__2E1BDC42">
+    <End Role="DATE" Type="Self.DATE" Multiplicity="0..1">
       <OnDelete Action="Cascade" />
     </End>
     <End Role="SPENDING_MONEY" Type="Self.SPENDING_MONEY" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="DATE">
-        <PropertyRef Name="DATE" />
+        <PropertyRef Name="DATE_ID" />
       </Principal>
       <Dependent Role="SPENDING_MONEY">
         <PropertyRef Name="DATE" />
@@ -153,28 +163,29 @@
     <EntitySet Name="DATE" EntityType="Self.DATE" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="MENU" EntityType="Self.MENU" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="SPENDING_MONEY" EntityType="Self.SPENDING_MONEY" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TYPE_OF_WINE" EntityType="Self.TYPE_OF_WINE" Schema="dbo" store:Type="Tables" />
-    <AssociationSet Name="FK_ALCOHOL_SPENDING_MONEY_date" Association="Self.FK_ALCOHOL_SPENDING_MONEY_date">
-      <End Role="DATE" EntitySet="DATE" />
-      <End Role="ALCOHOL_SPENDING_MONEY" EntitySet="ALCOHOL_SPENDING_MONEY" />
-    </AssociationSet>
-    <AssociationSet Name="FK_AlcoholCollectsMoney_date" Association="Self.FK_AlcoholCollectsMoney_date">
+    <AssociationSet Name="FK__ALCOHOL_C__DATE___30F848ED" Association="Self.FK__ALCOHOL_C__DATE___30F848ED">
       <End Role="DATE" EntitySet="DATE" />
       <End Role="ALCOHOL_COLLECTS_MONEY" EntitySet="ALCOHOL_COLLECTS_MONEY" />
     </AssociationSet>
-    <AssociationSet Name="FK_AlcoholCollectsMoney_TypeOfWine" Association="Self.FK_AlcoholCollectsMoney_TypeOfWine">
+    <AssociationSet Name="FK__ALCOHOL_C__TYPE___31EC6D26" Association="Self.FK__ALCOHOL_C__TYPE___31EC6D26">
       <End Role="TYPE_OF_WINE" EntitySet="TYPE_OF_WINE" />
       <End Role="ALCOHOL_COLLECTS_MONEY" EntitySet="ALCOHOL_COLLECTS_MONEY" />
     </AssociationSet>
-    <AssociationSet Name="FK_COLLECT__RELATIONS_DATE" Association="Self.FK_COLLECT__RELATIONS_DATE">
+    <AssociationSet Name="FK__ALCOHOL_S__DATE___37A5467C" Association="Self.FK__ALCOHOL_S__DATE___37A5467C">
+      <End Role="DATE" EntitySet="DATE" />
+      <End Role="ALCOHOL_SPENDING_MONEY" EntitySet="ALCOHOL_SPENDING_MONEY" />
+    </AssociationSet>
+    <AssociationSet Name="FK__COLLECT_M__DATE___2A4B4B5E" Association="Self.FK__COLLECT_M__DATE___2A4B4B5E">
       <End Role="DATE" EntitySet="DATE" />
       <End Role="COLLECT_MONEY" EntitySet="COLLECT_MONEY" />
     </AssociationSet>
-    <AssociationSet Name="FK_COLLECT__RELATIONS_MENU" Association="Self.FK_COLLECT__RELATIONS_MENU">
+    <AssociationSet Name="FK__COLLECT_M__MN_ID__2B3F6F97" Association="Self.FK__COLLECT_M__MN_ID__2B3F6F97">
       <End Role="MENU" EntitySet="MENU" />
       <End Role="COLLECT_MONEY" EntitySet="COLLECT_MONEY" />
     </AssociationSet>
-    <AssociationSet Name="FK_SPENDING_RELATIONS_DATE" Association="Self.FK_SPENDING_RELATIONS_DATE">
+    <AssociationSet Name="FK__SPENDING_M__DATE__2E1BDC42" Association="Self.FK__SPENDING_M__DATE__2E1BDC42">
       <End Role="DATE" EntitySet="DATE" />
       <End Role="SPENDING_MONEY" EntitySet="SPENDING_MONEY" />
     </AssociationSet>

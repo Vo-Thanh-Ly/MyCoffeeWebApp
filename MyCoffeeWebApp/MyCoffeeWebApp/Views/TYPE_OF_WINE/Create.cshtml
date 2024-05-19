@@ -1,0 +1,54 @@
+﻿@model MyCoffeeWebApp.TYPE_OF_WINE
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="card mb-4">
+        <h5 class="card-header">Thêm rượu</h5>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="card-body">
+
+
+        <div class="mb-3 row">
+            @Html.LabelFor(model => model.TYPE_OF_WINE_NAME, htmlAttributes: new { @class = "col-md-2 col-form-label" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.TYPE_OF_WINE_NAME, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.TYPE_OF_WINE_NAME, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+
+        <div class="mb-3 row">
+            @Html.LabelFor(model => model.TYPE_OF_WINE_PRICE, htmlAttributes: new { @class = "col-md-2 col-form-label" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.TYPE_OF_WINE_PRICE, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.TYPE_OF_WINE_PRICE, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="d-flex justify-content-center mt-3">
+                <input type="submit" value="Create" class="btn btn-info" />
+            </div>
+        </div>
+        <div class="d-flex justify-content-center mt-3">
+            @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-primary" })
+        </div>
+    </div>
+    </div>
+}
+
+<script>
+    var ulNgayVaGiaCa = document.getElementById("NgayVaGiaCa");
+    ulNgayVaGiaCa.classList.add("d-block");
+    var liNgay = document.getElementById("ruou");
+    liNgay.classList.add("active");
+    document.getElementById('searchInputBox').classList.add("d-none")
+</script>

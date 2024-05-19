@@ -1,0 +1,46 @@
+﻿@model MyCoffeeWebApp.MENU
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>MENU</h4>
+    <hr />
+    <div class="card mb-3">
+        <dl class="row">
+            <dt class="col-sm-3 col-col-label">
+                @Html.DisplayNameFor(model => model.MN_PRODUCTNAME)
+            </dt>
+
+            <dd class="col-sm-9">
+                @Html.DisplayFor(model => model.MN_PRODUCTNAME)
+            </dd>
+
+            <dt class="col-sm-3 col-col-label">
+                @Html.DisplayNameFor(model => model.MN_PRICE)
+            </dt>
+
+            <dd class="col-sm-9">
+                @Html.DisplayFor(model => model.MN_PRICE)
+            </dd>
+
+        </dl>
+    </div>
+
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MN_ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+
+<script>
+    var ulNgayVaGiaCa = document.getElementById("NgayVaGiaCa");
+    ulNgayVaGiaCa.classList.add("d-block");
+    var liNgay = document.getElementById("menu");
+    liNgay.classList.add("active");
+    document.getElementById('searchInputBox').classList.add("d-none")
+</script>

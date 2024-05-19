@@ -179,8 +179,11 @@
     <Compile Include="COLLECT_MONEY.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Controllers\ALCOHOL_SPENDING_MONEYController.cs" />
     <Compile Include="Controllers\DATEsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MENUsController.cs" />
+    <Compile Include="Controllers\TYPE_OF_WINEController.cs" />
     <Compile Include="DATE.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -210,6 +213,9 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Startup.cs" />
+    <Compile Include="sysdiagram.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="TYPE_OF_WINE.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -438,6 +444,21 @@
     <Content Include="webfonts\fa-brands-400.woff" />
     <Content Include="webfonts\fa-brands-400.ttf" />
     <Content Include="webfonts\fa-brands-400.eot" />
+    <Content Include="Views\MENUs\Create.cshtml" />
+    <Content Include="Views\MENUs\Delete.cshtml" />
+    <Content Include="Views\MENUs\Details.cshtml" />
+    <Content Include="Views\MENUs\Edit.cshtml" />
+    <Content Include="Views\MENUs\Index.cshtml" />
+    <Content Include="Views\TYPE_OF_WINE\Create.cshtml" />
+    <Content Include="Views\TYPE_OF_WINE\Delete.cshtml" />
+    <Content Include="Views\TYPE_OF_WINE\Details.cshtml" />
+    <Content Include="Views\TYPE_OF_WINE\Edit.cshtml" />
+    <Content Include="Views\TYPE_OF_WINE\Index.cshtml" />
+    <Content Include="Views\ALCOHOL_SPENDING_MONEY\Create.cshtml" />
+    <Content Include="Views\ALCOHOL_SPENDING_MONEY\Delete.cshtml" />
+    <Content Include="Views\ALCOHOL_SPENDING_MONEY\Details.cshtml" />
+    <Content Include="Views\ALCOHOL_SPENDING_MONEY\Edit.cshtml" />
+    <Content Include="Views\ALCOHOL_SPENDING_MONEY\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,0 +1,128 @@
+﻿@using PagedList
+@using PagedList.Mvc
+@model PagedList.IPagedList<MyCoffeeWebApp.ALCOHOL_SPENDING_MONEY>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    /* Trang hiện tại */
+    a.page-item.page-link:not([href]) {
+        background-color: #4cff00 !important; /* Màu nền */
+        color: #035afc !important; /* Màu chữ */
+    }
+
+    /* Hover trên trang hiện tại */
+    .pagination .page-item.disabled:hover {
+        background-color: #be1414; /* Màu nền */
+        color: #e2bebe; /* Màu chữ */
+    }
+</style>
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<style>
+    /* Trang hiện tại */
+    a.page-item.page-link:not([href]) {
+        background-color: #4cff00 !important; /* Màu nền */
+        color: #035afc !important; /* Màu chữ */
+    }
+
+    /* Hover trên trang hiện tại */
+    .pagination .page-item.disabled:hover {
+        background-color: #be1414; /* Màu nền */
+        color: #e2bebe; /* Màu chữ */
+    }
+</style>
+
+
+
+<div class="card">
+    <h5>Các ngày ghi nhận</h5>
+    <a href="@Url.Action("Create")">
+        <i class='bx bx-plus-medical'></i> Thêm ngày
+    </a>
+
+    <div class="card-body">
+        <div class="table-responsive text-nowrap">
+            <table class="table table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th>
+                            Nội dung chi
+                        </th>
+                        <th>
+                            Số tiền
+                        </th>
+                        <th>
+                            Ghi chú thêm
+                        </th>
+                        <th>
+                            Ngày chi
+                        </th>
+                        <th>Actions
+                        </th>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.ALCOHOL_SPENDING_MONEY_CONTENT)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.ALCOHOL_SPENDING_MONEY_QUANTITY)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.ALCOHOL_SPENDING_MONEY_NOTE)
+                            </td>
+                            <td>
+                                @Html.Raw(item.DATE.DATE_ID.ToString("dd/MM/yyyy"))
+                            </td>
+                            <td width="13%">
+                                <div>
+                                    <a href="@Url.Action("Edit", "ALCOHOL_SPENDING_MONEY", new { id = item.ALCOHOL_SPENDING_MONEY_ID })"><i class="bx bx-edit-alt me-1"></i> </a>
+                                    <a href="@Url.Action("Delete", "ALCOHOL_SPENDING_MONEY", new { id = item.ALCOHOL_SPENDING_MONEY_ID })"><i class="bx bx-trash me-1"></i> </a>
+                                    <a href="@Url.Action("Details", "ALCOHOL_SPENDING_MONEY", new { id = item.ALCOHOL_SPENDING_MONEY_ID})"><i class="bx bx-info-circle me-1"></i> </a>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+
+    </div>
+    @Html.PagedListPager(
+     Model,
+     page => Url.Action("Index", new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }),
+     new PagedListRenderOptions
+     {
+         Display = PagedListDisplayMode.IfNeeded,
+         MaximumPageNumbersToDisplay = 5,
+         UlElementClasses = new[] { "pagination", "justify-content-center" },
+         LiElementClasses = new[] { "page-item", "m-1" },
+         FunctionToTransformEachPageLink = (liTag, aTag) =>
+         {
+             aTag.AddCssClass("page-link");
+             return aTag;
+         }
+     }
+ )
+
+</div>
+<script>
+    var ulNgayVaGiaCa = document.getElementById("CacBangChi");
+    ulNgayVaGiaCa.classList.add("d-block");
+    var liNgay = document.getElementById("spendingOfWine");
+    liNgay.classList.add("active");
+    document.getElementById('searchString').placeholder = 'Tìm theo gợi nhớ...';
+
+
+</script>

@@ -34,7 +34,7 @@
                 <thead>
                     <tr>
                         <th>Ngày</th>
-                        <th>Nhận dạng ngày</th>
+                        <th>Gợi nhớ</th>
                         <th>Ghi chú</th>
                         <th>Hành động</th>
                     </tr>
@@ -44,15 +44,15 @@
                     {
                         <tr>
                             <td>
-                                <i class="fab fa-angular fa-lg text-danger me-3"></i> <strong>@Html.Raw(item.DATE1.Date.ToString("dd/MM/yyyy"))</strong>
+                                <i class="fab fa-angular fa-lg text-danger me-3"></i> <strong>@Html.Raw(item.DATE_ID.Date.ToString("dd/MM/yyyy"))</strong>
                             </td>
                             <td>@Html.DisplayFor(modelItem => item.date_name)</td>
                             <td>@Html.DisplayFor(modelItem => item.note)</td>
                             <td width="13%">
                                 <div>
-                                    <a href="@Url.Action("Edit", "DATEs", new { id = item.DATE1.ToString("MM-dd-yyyy") })"><i class="bx bx-edit-alt me-1"></i> </a>
-                                    <a href="@Url.Action("Delete", "DATEs", new { id = item.DATE1.ToString("MM-dd-yyyy") })"><i class="bx bx-trash me-1"></i> </a>
-                                    <a href="@Url.Action("Details", "DATEs", new { id = item.DATE1.ToString("MM-dd-yyyy") })"><i class="bx bx-info-circle me-1"></i> </a>
+                                    <a href="@Url.Action("Edit", "DATEs", new { id = item.DATE_ID.ToString("MM-dd-yyyy") })"><i class="bx bx-edit-alt me-1"></i> </a>
+                                    <a href="@Url.Action("Delete", "DATEs", new { id = item.DATE_ID.ToString("MM-dd-yyyy") })"><i class="bx bx-trash me-1"></i> </a>
+                                    <a href="@Url.Action("Details", "DATEs", new { id = item.DATE_ID.ToString("MM-dd-yyyy") })"><i class="bx bx-info-circle me-1"></i> </a>
                                 </div>
                             </td>
                         </tr>
@@ -87,4 +87,7 @@
     ulNgayVaGiaCa.classList.add("d-block");
     var liNgay = document.getElementById("Ngay");
     liNgay.classList.add("active");
+    document.getElementById('searchString').placeholder = 'Tìm theo nội dung...';
+
+
 </script>

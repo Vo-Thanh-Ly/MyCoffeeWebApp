@@ -1,0 +1,62 @@
+﻿@model IEnumerable<MyCoffeeWebApp.TYPE_OF_WINE>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card">
+    <h5>Danh sách rượu</h5>
+    <a href="@Url.Action("Create")">
+        <i class='bx bx-plus-medical'></i> Thêm rượu
+    </a>
+
+    <div class="card-body">
+        <div class="table-responsive text-nowrap">
+            <table class="table table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.TYPE_OF_WINE_NAME)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.TYPE_OF_WINE_PRICE)
+                        </th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.TYPE_OF_WINE_NAME)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.TYPE_OF_WINE_PRICE)
+                            </td>
+                            <td width="13%">
+                                <div>
+                                    <a href="@Url.Action("Edit", "TYPE_OF_WINE", new { id = item.TYPE_OF_WINE_ID })"><i class="bx bx-edit-alt me-1"></i> </a>
+                                    <a href="@Url.Action("Delete", "TYPE_OF_WINE", new { id = item.TYPE_OF_WINE_ID })"><i class="bx bx-trash me-1"></i> </a>
+                                    <a href="@Url.Action("Details", "TYPE_OF_WINE", new { id = item.TYPE_OF_WINE_ID })"><i class="bx bx-info-circle me-1"></i> </a>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+
+    </div>
+
+</div>
+<script>
+    var ulNgayVaGiaCa = document.getElementById("NgayVaGiaCa");
+    ulNgayVaGiaCa.classList.add("d-block");
+    var liNgay = document.getElementById("ruou");
+    liNgay.classList.add("active");
+    document.getElementById('searchString').placeholder = 'Tìm theo tên...';
+
+</script>

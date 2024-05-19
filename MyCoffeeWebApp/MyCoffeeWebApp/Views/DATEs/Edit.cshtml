@@ -13,8 +13,8 @@
     <div class="card mb-4">
         <h5 class="card-header">Sửa ngày</h5>
         <div class="card-body">
-                    @Html.HiddenFor(model => model.DATE1, new { htmlAttributes = new { @class = "form-control", @type = "date" } })
-                    @Html.ValidationMessageFor(model => model.DATE1, "", new { @class = "text-danger" })
+                    @Html.HiddenFor(model => model.DATE_ID, new { htmlAttributes = new { @class = "form-control", @type = "date" } })
+                    @Html.ValidationMessageFor(model => model.DATE_ID, "", new { @class = "text-danger" })
              
 
 
@@ -26,11 +26,12 @@
                 </div>
             </div>
 
+
             <div class="mb-3 row">
                 @Html.LabelFor(model => model.note, htmlAttributes: new { @class = "col-md-2 col-form-label" })
                 <div class="col-md-10">
                     @Html.EditorFor(model => model.note, new { htmlAttributes = new { @class = "form-control", @type = "textarea" } })
-                    @Html.ValidationMessageFor(model => model.date_name, "", new { @class = "text-danger" })
+                    @Html.ValidationMessageFor(model => model.note, "", new { @class = "text-danger" })
                 </div>
             </div>
 
@@ -56,4 +57,7 @@
     ulNgayVaGiaCa.classList.add("d-block");
     var liNgay = document.getElementById("Ngay");
     liNgay.classList.add("active");
+    document.getElementById('searchInputBox').classList.add("d-none")
+
+
 </script>

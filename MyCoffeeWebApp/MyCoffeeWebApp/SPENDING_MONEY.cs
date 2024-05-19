@@ -15,7 +15,7 @@ namespace MyCoffeeWebApp
     public partial class SPENDING_MONEY
     {
         public long SPENDING_ID { get; set; }
-        public System.DateTime DATE { get; set; }
+        public Nullable<System.DateTime> DATE { get; set; }
         public string SPENDING_CONTENT { get; set; }
         public int SPENDING_QUANLITY { get; set; }
         public long SPENDING_PRICE { get; set; }

@@ -1,0 +1,73 @@
+﻿@model MyCoffeeWebApp.ALCOHOL_SPENDING_MONEY
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div>
+    <h3>Bạn có muốn xóa loại rượu này?</h3>
+    <hr />
+    <dl class="dl-horizontal">
+
+        <dt class="col-sm-3 col-col-label">
+            @Html.DisplayNameFor(model => model.ALCOHOL_SPENDING_MONEY_CONTENT)
+        </dt>
+
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.ALCOHOL_SPENDING_MONEY_CONTENT)
+        </dd>
+
+        <dt class="col-sm-3 col-col-label">
+            @Html.DisplayNameFor(model => model.ALCOHOL_SPENDING_MONEY_QUANTITY)
+        </dt>
+
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.ALCOHOL_SPENDING_MONEY_QUANTITY)
+        </dd>
+
+        <dt class="col-sm-3 col-col-label">
+            @Html.DisplayNameFor(model => model.ALCOHOL_SPENDING_MONEY_NOTE)
+        </dt>
+
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.ALCOHOL_SPENDING_MONEY_NOTE)
+        </dd>
+
+        <dt class="col-sm-3 col-col-label">
+            @Html.DisplayNameFor(model => model.DATE.DATE_ID)
+        </dt>
+
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.DATE.DATE_ID)
+        </dd>
+
+    </dl>
+</div>
+<div>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="card mb-4">
+            <h5 class="card-header">Xác nhận xóa đồ uống này</h5>
+            <div class="card-body">
+                <div class="d-flex justify-content-center mt-3">
+                    <input onclick="return confirm('Bạn có chắc chắn muốn xóa không?')" type="submit" value="Delete" class="btn btn-danger" /> |
+
+                    @Html.ActionLink("Cancel", "Index", null, new { @class = "btn btn-primary" })
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+
+<script>
+    var ulNgayVaGiaCa = document.getElementById("CacBangChi");
+    ulNgayVaGiaCa.classList.add("d-block");
+    var liNgay = document.getElementById("spendingOfWine");
+    liNgay.classList.add("active");
+
+    document.getElementById('searchInputBox').classList.add("d-none")
+
+</script>

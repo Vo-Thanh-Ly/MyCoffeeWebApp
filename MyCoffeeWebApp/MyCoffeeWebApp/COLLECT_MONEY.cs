@@ -15,13 +15,13 @@ namespace MyCoffeeWebApp
     public partial class COLLECT_MONEY
     {
         public long CLMN_ID { get; set; }
-        public System.DateTime DATE { get; set; }
-        public int MN_ID { get; set; }
+        public Nullable<System.DateTime> DATE_ID { get; set; }
+        public Nullable<int> MN_ID { get; set; }
         public int CLMN_QUANLITY { get; set; }
         public long CLMN_PRICE { get; set; }
         public string CLMN_NOTE { get; set; }
     
+        public virtual DATE DATE { get; set; }
         public virtual MENU MENU { get; set; }
-        public virtual DATE DATE1 { get; set; }
     }
 }

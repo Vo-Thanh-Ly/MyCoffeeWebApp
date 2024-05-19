@@ -51,6 +51,8 @@ D:\cá nhân\MyCoffeeWebApp\MyCoffeeWebApp\MyCoffeeWebApp\bin\Microsoft.Owin.Sec
 D:\cá nhân\MyCoffeeWebApp\MyCoffeeWebApp\MyCoffeeWebApp\bin\Microsoft.Web.Infrastructure.dll
 D:\cá nhân\MyCoffeeWebApp\MyCoffeeWebApp\MyCoffeeWebApp\bin\Newtonsoft.Json.dll
 D:\cá nhân\MyCoffeeWebApp\MyCoffeeWebApp\MyCoffeeWebApp\bin\Owin.dll
+D:\cá nhân\MyCoffeeWebApp\MyCoffeeWebApp\MyCoffeeWebApp\bin\PagedList.dll
+D:\cá nhân\MyCoffeeWebApp\MyCoffeeWebApp\MyCoffeeWebApp\bin\PagedList.Mvc.dll
 D:\cá nhân\MyCoffeeWebApp\MyCoffeeWebApp\MyCoffeeWebApp\bin\System.Web.Helpers.dll
 D:\cá nhân\MyCoffeeWebApp\MyCoffeeWebApp\MyCoffeeWebApp\bin\System.Web.Mvc.dll
 D:\cá nhân\MyCoffeeWebApp\MyCoffeeWebApp\MyCoffeeWebApp\bin\System.Web.Optimization.dll
@@ -59,7 +61,10 @@ D:\cá nhân\MyCoffeeWebApp\MyCoffeeWebApp\MyCoffeeWebApp\bin\System.Web.WebPage
 D:\cá nhân\MyCoffeeWebApp\MyCoffeeWebApp\MyCoffeeWebApp\bin\System.Web.WebPages.dll
 D:\cá nhân\MyCoffeeWebApp\MyCoffeeWebApp\MyCoffeeWebApp\bin\System.Web.WebPages.Razor.dll
 D:\cá nhân\MyCoffeeWebApp\MyCoffeeWebApp\MyCoffeeWebApp\bin\WebGrease.dll
+D:\cá nhân\MyCoffeeWebApp\MyCoffeeWebApp\MyCoffeeWebApp\bin\X.PagedList.dll
 D:\cá nhân\MyCoffeeWebApp\MyCoffeeWebApp\MyCoffeeWebApp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\cá nhân\MyCoffeeWebApp\MyCoffeeWebApp\MyCoffeeWebApp\bin\PagedList.xml
+D:\cá nhân\MyCoffeeWebApp\MyCoffeeWebApp\MyCoffeeWebApp\bin\PagedList.Mvc.xml
 D:\cá nhân\MyCoffeeWebApp\MyCoffeeWebApp\MyCoffeeWebApp\bin\System.Web.Helpers.xml
 D:\cá nhân\MyCoffeeWebApp\MyCoffeeWebApp\MyCoffeeWebApp\bin\System.Web.Mvc.xml
 D:\cá nhân\MyCoffeeWebApp\MyCoffeeWebApp\MyCoffeeWebApp\bin\System.Web.Razor.xml
@@ -88,8 +93,3 @@ D:\cá nhân\MyCoffeeWebApp\MyCoffeeWebApp\MyCoffeeWebApp\obj\Debug\MyCoffeeWebA
 D:\cá nhân\MyCoffeeWebApp\MyCoffeeWebApp\MyCoffeeWebApp\obj\Debug\MyCoffee.366EE2C6.Up2Date
 D:\cá nhân\MyCoffeeWebApp\MyCoffeeWebApp\MyCoffeeWebApp\obj\Debug\MyCoffeeWebApp.dll
 D:\cá nhân\MyCoffeeWebApp\MyCoffeeWebApp\MyCoffeeWebApp\obj\Debug\MyCoffeeWebApp.pdb
-D:\cá nhân\MyCoffeeWebApp\MyCoffeeWebApp\MyCoffeeWebApp\bin\PagedList.dll
-D:\cá nhân\MyCoffeeWebApp\MyCoffeeWebApp\MyCoffeeWebApp\bin\PagedList.xml
-D:\cá nhân\MyCoffeeWebApp\MyCoffeeWebApp\MyCoffeeWebApp\bin\PagedList.Mvc.dll
-D:\cá nhân\MyCoffeeWebApp\MyCoffeeWebApp\MyCoffeeWebApp\bin\PagedList.Mvc.xml
-D:\cá nhân\MyCoffeeWebApp\MyCoffeeWebApp\MyCoffeeWebApp\bin\X.PagedList.dll

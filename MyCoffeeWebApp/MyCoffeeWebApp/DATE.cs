@@ -12,7 +12,6 @@ namespace MyCoffeeWebApp
     using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
-    using System.ComponentModel.DataAnnotations.Schema;
 
     public partial class DATE
     {
@@ -24,18 +23,20 @@ namespace MyCoffeeWebApp
             this.COLLECT_MONEY = new HashSet<COLLECT_MONEY>();
             this.SPENDING_MONEY = new HashSet<SPENDING_MONEY>();
         }
-        [Column(TypeName = "date")]
+
         [Required(ErrorMessage = "Ngày là bắt buộc")]
         [Display(Name = "Ngày")]
-        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
-        public System.DateTime DATE1 { get; set; }
-        [Display(Name = "Đặc điểm")]
-        [StringLength(100, ErrorMessage = "Đặc điểm không được vượt quá 100 ký tự")]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
+        public System.DateTime DATE_ID { get; set; }
+
+        [Display(Name = "Gợi nhớ ngày")]
+        [StringLength(150, ErrorMessage ="Độ dài tối đa là 150 ký tự")]
         public string date_name { get; set; }
+
         [Display(Name = "Ghi chú")]
-        [StringLength(1000, ErrorMessage = "Ghi chú không được vượt quá 1000 ký tự")]
+        [StringLength(1000, ErrorMessage = "Độ dài tối đa là 1000 ký tự")]
         public string note { get; set; }
-    
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ALCOHOL_COLLECTS_MONEY> ALCOHOL_COLLECTS_MONEY { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

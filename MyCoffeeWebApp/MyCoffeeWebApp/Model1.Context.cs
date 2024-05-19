@@ -25,12 +25,13 @@ namespace MyCoffeeWebApp
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<COLLECT_MONEY> COLLECT_MONEY { get; set; }
-        public virtual DbSet<MENU> MENUs { get; set; }
-        public virtual DbSet<SPENDING_MONEY> SPENDING_MONEY { get; set; }
         public virtual DbSet<ALCOHOL_COLLECTS_MONEY> ALCOHOL_COLLECTS_MONEY { get; set; }
         public virtual DbSet<ALCOHOL_SPENDING_MONEY> ALCOHOL_SPENDING_MONEY { get; set; }
-        public virtual DbSet<TYPE_OF_WINE> TYPE_OF_WINE { get; set; }
+        public virtual DbSet<COLLECT_MONEY> COLLECT_MONEY { get; set; }
         public virtual DbSet<DATE> DATEs { get; set; }
+        public virtual DbSet<MENU> MENUs { get; set; }
+        public virtual DbSet<SPENDING_MONEY> SPENDING_MONEY { get; set; }
+        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
+        public virtual DbSet<TYPE_OF_WINE> TYPE_OF_WINE { get; set; }
     }
 }

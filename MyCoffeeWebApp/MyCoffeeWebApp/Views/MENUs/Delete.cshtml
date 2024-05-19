@@ -1,0 +1,56 @@
+﻿@model MyCoffeeWebApp.MENU
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h3>Bạn có muốn xóa đồ uống này?</h3>
+<div>
+    <h4>MENU</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt class="col-sm-3 col-col-label">
+            @Html.DisplayNameFor(model => model.MN_PRODUCTNAME)
+        </dt>
+
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.MN_PRODUCTNAME)
+        </dd>
+
+        <dt class="col-sm-3 col-col-label">
+            @Html.DisplayNameFor(model => model.MN_PRICE)
+        </dt>
+
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.MN_PRICE)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="card mb-4">
+            <h5 class="card-header">Xác nhận xóa đồ uống này</h5>
+            <div class="card-body">
+                <div class="d-flex justify-content-center mt-3">
+                    <input onclick="return confirm('Bạn có chắc chắn muốn xóa không?')" type="submit" value="Delete" class="btn btn-danger" /> |
+
+                    @Html.ActionLink("Cancel", "Index", null, new { @class = "btn btn-primary" })
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+
+<script>
+    var ulNgayVaGiaCa = document.getElementById("NgayVaGiaCa");
+    ulNgayVaGiaCa.classList.add("d-block");
+    var liNgay = document.getElementById("menu");
+    liNgay.classList.add("active");
+    document.getElementById('searchInputBox').classList.add("d-none")
+</script>
