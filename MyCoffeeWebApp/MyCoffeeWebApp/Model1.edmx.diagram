@@ -5,12 +5,12 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="5bfc08dd799d4d85980732fb518bce6b" Name="Diagram1" ZoomLevel="66">
-        <EntityTypeShape EntityType="MyCoffeeWebAppModel.ALCOHOL_COLLECTS_MONEY" Width="1.5" PointX="6" PointY="6.125" />
-        <EntityTypeShape EntityType="MyCoffeeWebAppModel.ALCOHOL_SPENDING_MONEY" Width="1.5" PointX="3" PointY="14.125" />
-        <EntityTypeShape EntityType="MyCoffeeWebAppModel.COLLECT_MONEY" Width="1.5" PointX="3" PointY="8" />
-        <EntityTypeShape EntityType="MyCoffeeWebAppModel.DATE" Width="1.5" PointX="0.75" PointY="6.125" />
-        <EntityTypeShape EntityType="MyCoffeeWebAppModel.MENU" Width="1.5" PointX="0.75" PointY="9.375" />
-        <EntityTypeShape EntityType="MyCoffeeWebAppModel.SPENDING_MONEY" Width="1.5" PointX="3" PointY="4.625" />
+        <EntityTypeShape EntityType="MyCoffeeWebAppModel.ALCOHOL_COLLECTS_MONEY" Width="1.5" PointX="7.875" PointY="10.25" />
+        <EntityTypeShape EntityType="MyCoffeeWebAppModel.ALCOHOL_SPENDING_MONEY" Width="1.5" PointX="6" PointY="14.125" />
+        <EntityTypeShape EntityType="MyCoffeeWebAppModel.COLLECT_MONEY" Width="1.5" PointX="12.5" PointY="11.625" />
+        <EntityTypeShape EntityType="MyCoffeeWebAppModel.DATE" Width="1.5" PointX="11.25" PointY="8.75" />
+        <EntityTypeShape EntityType="MyCoffeeWebAppModel.MENU" Width="1.5" PointX="9.625" PointY="13.25" />
+        <EntityTypeShape EntityType="MyCoffeeWebAppModel.SPENDING_MONEY" Width="1.5" PointX="3.875" PointY="7" />
         <EntityTypeShape EntityType="MyCoffeeWebAppModel.sysdiagram" Width="1.5" PointX="0.75" PointY="0.75" />
         <EntityTypeShape EntityType="MyCoffeeWebAppModel.TYPE_OF_WINE" Width="1.5" PointX="3.75" PointY="1.375" />
         <AssociationConnector Association="MyCoffeeWebAppModel.FK__ALCOHOL_C__DATE___30F848ED" />

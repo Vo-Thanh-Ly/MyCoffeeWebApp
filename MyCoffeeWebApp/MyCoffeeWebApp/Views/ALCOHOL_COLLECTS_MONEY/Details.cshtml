@@ -1,0 +1,51 @@
+﻿@model MyCoffeeWebApp.ALCOHOL_COLLECTS_MONEY
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ALCOHOL_COLLECTS_MONEY</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ALCOHOL_COLLECTS_MONEY_QUANTITY)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ALCOHOL_COLLECTS_MONEY_QUANTITY)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ALCOHOL_COLLECTS_MONEY_PRICE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ALCOHOL_COLLECTS_MONEY_PRICE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DATE.date_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DATE.date_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TYPE_OF_WINE.TYPE_OF_WINE_NAME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TYPE_OF_WINE.TYPE_OF_WINE_NAME)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ALCOHOL_COLLECTS_MONEY_ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

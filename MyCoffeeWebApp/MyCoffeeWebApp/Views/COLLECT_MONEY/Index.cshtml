@@ -1,0 +1,58 @@
+﻿@model IEnumerable<MyCoffeeWebApp.COLLECT_MONEY>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CLMN_QUANLITY)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CLMN_PRICE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CLMN_NOTE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DATE.date_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MENU.MN_PRODUCTNAME)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CLMN_QUANLITY)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CLMN_PRICE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CLMN_NOTE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DATE.date_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MENU.MN_PRODUCTNAME)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.CLMN_ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.CLMN_ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.CLMN_ID })
+        </td>
+    </tr>
+}
+
+</table>

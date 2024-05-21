@@ -24,6 +24,7 @@
           <Property Name="ALCOHOL_SPENDING_MONEY_CONTENT" Type="varchar" MaxLength="200" Nullable="false" />
           <Property Name="ALCOHOL_SPENDING_MONEY_QUANTITY" Type="float" Nullable="false" />
           <Property Name="ALCOHOL_SPENDING_MONEY_NOTE" Type="varchar" MaxLength="300" />
+          <Property Name="ALCOHOL_SPENDING_MONEY_PRICE" Type="bigint" Nullable="false" />
         </EntityType>
         <EntityType Name="COLLECT_MONEY">
           <Key>
@@ -255,6 +256,7 @@
           <Property Name="ALCOHOL_SPENDING_MONEY_QUANTITY" Type="Double" Nullable="false" />
           <Property Name="ALCOHOL_SPENDING_MONEY_NOTE" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="DATE" Relationship="MyCoffeeWebAppModel.FK__ALCOHOL_S__DATE___37A5467C" FromRole="ALCOHOL_SPENDING_MONEY" ToRole="DATE" />
+          <Property Name="ALCOHOL_SPENDING_MONEY_PRICE" Type="Int64" Nullable="false" />
         </EntityType>
         <EntityType Name="COLLECT_MONEY">
           <Key>
@@ -421,6 +423,7 @@
           <EntitySetMapping Name="ALCOHOL_SPENDING_MONEY">
             <EntityTypeMapping TypeName="MyCoffeeWebAppModel.ALCOHOL_SPENDING_MONEY">
               <MappingFragment StoreEntitySet="ALCOHOL_SPENDING_MONEY">
+                <ScalarProperty Name="ALCOHOL_SPENDING_MONEY_PRICE" ColumnName="ALCOHOL_SPENDING_MONEY_PRICE" />
                 <ScalarProperty Name="ALCOHOL_SPENDING_MONEY_NOTE" ColumnName="ALCOHOL_SPENDING_MONEY_NOTE" />
                 <ScalarProperty Name="ALCOHOL_SPENDING_MONEY_QUANTITY" ColumnName="ALCOHOL_SPENDING_MONEY_QUANTITY" />
                 <ScalarProperty Name="ALCOHOL_SPENDING_MONEY_CONTENT" ColumnName="ALCOHOL_SPENDING_MONEY_CONTENT" />

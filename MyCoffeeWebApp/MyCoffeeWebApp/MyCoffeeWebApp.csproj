@@ -179,10 +179,14 @@
     <Compile Include="COLLECT_MONEY.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Controllers\ALCOHOL_COLLECTS_MONEYController.cs" />
     <Compile Include="Controllers\ALCOHOL_SPENDING_MONEYController.cs" />
+    <Compile Include="Controllers\CharController.cs" />
+    <Compile Include="Controllers\COLLECT_MONEYController.cs" />
     <Compile Include="Controllers\DATEsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MENUsController.cs" />
+    <Compile Include="Controllers\SPENDING_MONEYController.cs" />
     <Compile Include="Controllers\TYPE_OF_WINEController.cs" />
     <Compile Include="DATE.cs">
       <DependentUpon>Model1.tt</DependentUpon>
@@ -459,10 +463,26 @@
     <Content Include="Views\ALCOHOL_SPENDING_MONEY\Details.cshtml" />
     <Content Include="Views\ALCOHOL_SPENDING_MONEY\Edit.cshtml" />
     <Content Include="Views\ALCOHOL_SPENDING_MONEY\Index.cshtml" />
+    <Content Include="Views\ALCOHOL_COLLECTS_MONEY\Create.cshtml" />
+    <Content Include="Views\ALCOHOL_COLLECTS_MONEY\Delete.cshtml" />
+    <Content Include="Views\ALCOHOL_COLLECTS_MONEY\Details.cshtml" />
+    <Content Include="Views\ALCOHOL_COLLECTS_MONEY\Edit.cshtml" />
+    <Content Include="Views\ALCOHOL_COLLECTS_MONEY\Index.cshtml" />
+    <Content Include="Views\COLLECT_MONEY\Create.cshtml" />
+    <Content Include="Views\COLLECT_MONEY\Delete.cshtml" />
+    <Content Include="Views\COLLECT_MONEY\Details.cshtml" />
+    <Content Include="Views\COLLECT_MONEY\Edit.cshtml" />
+    <Content Include="Views\COLLECT_MONEY\Index.cshtml" />
+    <Content Include="Views\SPENDING_MONEY\Create.cshtml" />
+    <Content Include="Views\SPENDING_MONEY\Delete.cshtml" />
+    <Content Include="Views\SPENDING_MONEY\Details.cshtml" />
+    <Content Include="Views\SPENDING_MONEY\Edit.cshtml" />
+    <Content Include="Views\SPENDING_MONEY\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\Char\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
