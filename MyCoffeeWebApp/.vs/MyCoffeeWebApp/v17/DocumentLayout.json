@@ -1,9 +1,53 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\votha\\source\\repos\\Vo-Thanh-Ly\\MyCoffeeWebApp\\MyCoffeeWebApp\\",
+  "WorkspaceRootPath": "D:\\MyCoffeeWebApp\\MyCoffeeWebApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A398A1E4-D8FD-4B59-9959-2DF938E1276F}|MyCoffeeWebApp\\MyCoffeeWebApp.csproj|c:\\users\\votha\\source\\repos\\vo-thanh-ly\\mycoffeewebapp\\mycoffeewebapp\\mycoffeewebapp\\controllers\\charcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A398A1E4-D8FD-4B59-9959-2DF938E1276F}|MyCoffeeWebApp\\MyCoffeeWebApp.csproj|d:\\mycoffeewebapp\\mycoffeewebapp\\mycoffeewebapp\\controllers\\alcohol_spending_moneycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A398A1E4-D8FD-4B59-9959-2DF938E1276F}|MyCoffeeWebApp\\MyCoffeeWebApp.csproj|solutionrelative:mycoffeewebapp\\controllers\\alcohol_spending_moneycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A398A1E4-D8FD-4B59-9959-2DF938E1276F}|MyCoffeeWebApp\\MyCoffeeWebApp.csproj|d:\\mycoffeewebapp\\mycoffeewebapp\\mycoffeewebapp\\alcohol_spending_money.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A398A1E4-D8FD-4B59-9959-2DF938E1276F}|MyCoffeeWebApp\\MyCoffeeWebApp.csproj|solutionrelative:mycoffeewebapp\\alcohol_spending_money.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A398A1E4-D8FD-4B59-9959-2DF938E1276F}|MyCoffeeWebApp\\MyCoffeeWebApp.csproj|d:\\mycoffeewebapp\\mycoffeewebapp\\mycoffeewebapp\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A398A1E4-D8FD-4B59-9959-2DF938E1276F}|MyCoffeeWebApp\\MyCoffeeWebApp.csproj|solutionrelative:mycoffeewebapp\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A398A1E4-D8FD-4B59-9959-2DF938E1276F}|MyCoffeeWebApp\\MyCoffeeWebApp.csproj|d:\\mycoffeewebapp\\mycoffeewebapp\\mycoffeewebapp\\type_of_wine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A398A1E4-D8FD-4B59-9959-2DF938E1276F}|MyCoffeeWebApp\\MyCoffeeWebApp.csproj|solutionrelative:mycoffeewebapp\\type_of_wine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A398A1E4-D8FD-4B59-9959-2DF938E1276F}|MyCoffeeWebApp\\MyCoffeeWebApp.csproj|d:\\mycoffeewebapp\\mycoffeewebapp\\mycoffeewebapp\\spending_money.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A398A1E4-D8FD-4B59-9959-2DF938E1276F}|MyCoffeeWebApp\\MyCoffeeWebApp.csproj|solutionrelative:mycoffeewebapp\\spending_money.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A398A1E4-D8FD-4B59-9959-2DF938E1276F}|MyCoffeeWebApp\\MyCoffeeWebApp.csproj|d:\\mycoffeewebapp\\mycoffeewebapp\\mycoffeewebapp\\model1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A398A1E4-D8FD-4B59-9959-2DF938E1276F}|MyCoffeeWebApp\\MyCoffeeWebApp.csproj|solutionrelative:mycoffeewebapp\\model1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A398A1E4-D8FD-4B59-9959-2DF938E1276F}|MyCoffeeWebApp\\MyCoffeeWebApp.csproj|d:\\mycoffeewebapp\\mycoffeewebapp\\mycoffeewebapp\\date.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A398A1E4-D8FD-4B59-9959-2DF938E1276F}|MyCoffeeWebApp\\MyCoffeeWebApp.csproj|solutionrelative:mycoffeewebapp\\date.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A398A1E4-D8FD-4B59-9959-2DF938E1276F}|MyCoffeeWebApp\\MyCoffeeWebApp.csproj|d:\\mycoffeewebapp\\mycoffeewebapp\\mycoffeewebapp\\collect_money.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A398A1E4-D8FD-4B59-9959-2DF938E1276F}|MyCoffeeWebApp\\MyCoffeeWebApp.csproj|solutionrelative:mycoffeewebapp\\collect_money.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A398A1E4-D8FD-4B59-9959-2DF938E1276F}|MyCoffeeWebApp\\MyCoffeeWebApp.csproj|d:\\mycoffeewebapp\\mycoffeewebapp\\mycoffeewebapp\\alcohol_collects_money.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A398A1E4-D8FD-4B59-9959-2DF938E1276F}|MyCoffeeWebApp\\MyCoffeeWebApp.csproj|solutionrelative:mycoffeewebapp\\alcohol_collects_money.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A398A1E4-D8FD-4B59-9959-2DF938E1276F}|MyCoffeeWebApp\\MyCoffeeWebApp.csproj|d:\\mycoffeewebapp\\mycoffeewebapp\\mycoffeewebapp\\model1.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
+      "RelativeMoniker": "D:0:0:{A398A1E4-D8FD-4B59-9959-2DF938E1276F}|MyCoffeeWebApp\\MyCoffeeWebApp.csproj|solutionrelative:mycoffeewebapp\\model1.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A398A1E4-D8FD-4B59-9959-2DF938E1276F}|MyCoffeeWebApp\\MyCoffeeWebApp.csproj|d:\\mycoffeewebapp\\mycoffeewebapp\\mycoffeewebapp\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{A398A1E4-D8FD-4B59-9959-2DF938E1276F}|MyCoffeeWebApp\\MyCoffeeWebApp.csproj|solutionrelative:mycoffeewebapp\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A398A1E4-D8FD-4B59-9959-2DF938E1276F}|MyCoffeeWebApp\\MyCoffeeWebApp.csproj|d:\\mycoffeewebapp\\mycoffeewebapp\\mycoffeewebapp\\controllers\\charcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A398A1E4-D8FD-4B59-9959-2DF938E1276F}|MyCoffeeWebApp\\MyCoffeeWebApp.csproj|solutionrelative:mycoffeewebapp\\controllers\\charcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -19,10 +63,152 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "ALCOHOL_SPENDING_MONEYController.cs",
+              "DocumentMoniker": "D:\\MyCoffeeWebApp\\MyCoffeeWebApp\\MyCoffeeWebApp\\Controllers\\ALCOHOL_SPENDING_MONEYController.cs",
+              "RelativeDocumentMoniker": "MyCoffeeWebApp\\Controllers\\ALCOHOL_SPENDING_MONEYController.cs",
+              "ToolTip": "D:\\MyCoffeeWebApp\\MyCoffeeWebApp\\MyCoffeeWebApp\\Controllers\\ALCOHOL_SPENDING_MONEYController.cs",
+              "RelativeToolTip": "MyCoffeeWebApp\\Controllers\\ALCOHOL_SPENDING_MONEYController.cs",
+              "ViewState": "AQIAAD4AAAAAAAAAAAAAAFQAAABDAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-22T16:26:12.31Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DATE.cs",
+              "DocumentMoniker": "D:\\MyCoffeeWebApp\\MyCoffeeWebApp\\MyCoffeeWebApp\\DATE.cs",
+              "RelativeDocumentMoniker": "MyCoffeeWebApp\\DATE.cs",
+              "ToolTip": "D:\\MyCoffeeWebApp\\MyCoffeeWebApp\\MyCoffeeWebApp\\DATE.cs",
+              "RelativeToolTip": "MyCoffeeWebApp\\DATE.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAAwCMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-22T15:48:31.484Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MENU.cs",
+              "DocumentMoniker": "D:\\MyCoffeeWebApp\\MyCoffeeWebApp\\MyCoffeeWebApp\\MENU.cs",
+              "RelativeDocumentMoniker": "MyCoffeeWebApp\\MENU.cs",
+              "ToolTip": "D:\\MyCoffeeWebApp\\MyCoffeeWebApp\\MyCoffeeWebApp\\MENU.cs",
+              "RelativeToolTip": "MyCoffeeWebApp\\MENU.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAWwCAAAAA8AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-22T15:48:30.811Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Model1.cs",
+              "DocumentMoniker": "D:\\MyCoffeeWebApp\\MyCoffeeWebApp\\MyCoffeeWebApp\\Model1.cs",
+              "RelativeDocumentMoniker": "MyCoffeeWebApp\\Model1.cs",
+              "ToolTip": "D:\\MyCoffeeWebApp\\MyCoffeeWebApp\\MyCoffeeWebApp\\Model1.cs",
+              "RelativeToolTip": "MyCoffeeWebApp\\Model1.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-22T15:48:29.941Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SPENDING_MONEY.cs",
+              "DocumentMoniker": "D:\\MyCoffeeWebApp\\MyCoffeeWebApp\\MyCoffeeWebApp\\SPENDING_MONEY.cs",
+              "RelativeDocumentMoniker": "MyCoffeeWebApp\\SPENDING_MONEY.cs",
+              "ToolTip": "D:\\MyCoffeeWebApp\\MyCoffeeWebApp\\MyCoffeeWebApp\\SPENDING_MONEY.cs",
+              "RelativeToolTip": "MyCoffeeWebApp\\SPENDING_MONEY.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAzwCwAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-22T15:48:29.082Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TYPE_OF_WINE.cs",
+              "DocumentMoniker": "D:\\MyCoffeeWebApp\\MyCoffeeWebApp\\MyCoffeeWebApp\\TYPE_OF_WINE.cs",
+              "RelativeDocumentMoniker": "MyCoffeeWebApp\\TYPE_OF_WINE.cs",
+              "ToolTip": "D:\\MyCoffeeWebApp\\MyCoffeeWebApp\\MyCoffeeWebApp\\TYPE_OF_WINE.cs",
+              "RelativeToolTip": "MyCoffeeWebApp\\TYPE_OF_WINE.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-22T15:48:27.685Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "COLLECT_MONEY.cs",
+              "DocumentMoniker": "D:\\MyCoffeeWebApp\\MyCoffeeWebApp\\MyCoffeeWebApp\\COLLECT_MONEY.cs",
+              "RelativeDocumentMoniker": "MyCoffeeWebApp\\COLLECT_MONEY.cs",
+              "ToolTip": "D:\\MyCoffeeWebApp\\MyCoffeeWebApp\\MyCoffeeWebApp\\COLLECT_MONEY.cs",
+              "RelativeToolTip": "MyCoffeeWebApp\\COLLECT_MONEY.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACwAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-22T15:48:32.193Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ALCOHOL_SPENDING_MONEY.cs",
+              "DocumentMoniker": "D:\\MyCoffeeWebApp\\MyCoffeeWebApp\\MyCoffeeWebApp\\ALCOHOL_SPENDING_MONEY.cs",
+              "RelativeDocumentMoniker": "MyCoffeeWebApp\\ALCOHOL_SPENDING_MONEY.cs",
+              "ToolTip": "D:\\MyCoffeeWebApp\\MyCoffeeWebApp\\MyCoffeeWebApp\\ALCOHOL_SPENDING_MONEY.cs",
+              "RelativeToolTip": "MyCoffeeWebApp\\ALCOHOL_SPENDING_MONEY.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAzwCYAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-22T15:48:32.826Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ALCOHOL_COLLECTS_MONEY.cs",
+              "DocumentMoniker": "D:\\MyCoffeeWebApp\\MyCoffeeWebApp\\MyCoffeeWebApp\\ALCOHOL_COLLECTS_MONEY.cs",
+              "RelativeDocumentMoniker": "MyCoffeeWebApp\\ALCOHOL_COLLECTS_MONEY.cs",
+              "ToolTip": "D:\\MyCoffeeWebApp\\MyCoffeeWebApp\\MyCoffeeWebApp\\ALCOHOL_COLLECTS_MONEY.cs",
+              "RelativeToolTip": "MyCoffeeWebApp\\ALCOHOL_COLLECTS_MONEY.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABYAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-22T15:48:33.457Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Model1.edmx [Diagram1]",
+              "DocumentMoniker": "D:\\MyCoffeeWebApp\\MyCoffeeWebApp\\MyCoffeeWebApp\\Model1.edmx",
+              "RelativeDocumentMoniker": "MyCoffeeWebApp\\Model1.edmx",
+              "ToolTip": "D:\\MyCoffeeWebApp\\MyCoffeeWebApp\\MyCoffeeWebApp\\Model1.edmx [Diagram1]",
+              "RelativeToolTip": "MyCoffeeWebApp\\Model1.edmx [Diagram1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
+              "WhenOpened": "2024-05-22T15:47:50.664Z",
+              "EditorCaption": " [Diagram1]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Web.config",
+              "DocumentMoniker": "D:\\MyCoffeeWebApp\\MyCoffeeWebApp\\MyCoffeeWebApp\\Web.config",
+              "RelativeDocumentMoniker": "MyCoffeeWebApp\\Web.config",
+              "ToolTip": "D:\\MyCoffeeWebApp\\MyCoffeeWebApp\\MyCoffeeWebApp\\Web.config",
+              "RelativeToolTip": "MyCoffeeWebApp\\Web.config",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAF0AAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-05-22T15:42:01.448Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "CharController.cs",
-              "DocumentMoniker": "C:\\Users\\votha\\source\\repos\\Vo-Thanh-Ly\\MyCoffeeWebApp\\MyCoffeeWebApp\\MyCoffeeWebApp\\Controllers\\CharController.cs",
+              "DocumentMoniker": "D:\\MyCoffeeWebApp\\MyCoffeeWebApp\\MyCoffeeWebApp\\Controllers\\CharController.cs",
               "RelativeDocumentMoniker": "MyCoffeeWebApp\\Controllers\\CharController.cs",
-              "ToolTip": "C:\\Users\\votha\\source\\repos\\Vo-Thanh-Ly\\MyCoffeeWebApp\\MyCoffeeWebApp\\MyCoffeeWebApp\\Controllers\\CharController.cs",
+              "ToolTip": "D:\\MyCoffeeWebApp\\MyCoffeeWebApp\\MyCoffeeWebApp\\Controllers\\CharController.cs",
               "RelativeToolTip": "MyCoffeeWebApp\\Controllers\\CharController.cs",
               "ViewState": "AQIAAAgAAAAAAAAAAAAuwBwAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",

@@ -4,84 +4,74 @@
     <EntitySetMapping Name="ALCOHOL_COLLECTS_MONEY">
       <EntityTypeMapping TypeName="MyCoffeeWebAppModel.ALCOHOL_COLLECTS_MONEY">
         <MappingFragment StoreEntitySet="ALCOHOL_COLLECTS_MONEY">
-          <ScalarProperty Name="ALCOHOL_COLLECTS_MONEY_ID" ColumnName="ALCOHOL_COLLECTS_MONEY_ID" />
-          <ScalarProperty Name="ALCOHOL_COLLECTS_MONEY_PRICE" ColumnName="ALCOHOL_COLLECTS_MONEY_PRICE" />
-          <ScalarProperty Name="TYPE_OF_WINE_ID" ColumnName="TYPE_OF_WINE_ID" />
-          <ScalarProperty Name="DATE_ID" ColumnName="DATE_ID" />
           <ScalarProperty Name="ALCOHOL_COLLECTS_MONEY_QUANTITY" ColumnName="ALCOHOL_COLLECTS_MONEY_QUANTITY" />
+          <ScalarProperty Name="DATE_ID" ColumnName="DATE_ID" />
+          <ScalarProperty Name="TYPE_OF_WINE_ID" ColumnName="TYPE_OF_WINE_ID" />
+          <ScalarProperty Name="ALCOHOL_COLLECTS_MONEY_PRICE" ColumnName="ALCOHOL_COLLECTS_MONEY_PRICE" />
+          <ScalarProperty Name="ALCOHOL_COLLECTS_MONEY_ID" ColumnName="ALCOHOL_COLLECTS_MONEY_ID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="ALCOHOL_SPENDING_MONEY">
       <EntityTypeMapping TypeName="MyCoffeeWebAppModel.ALCOHOL_SPENDING_MONEY">
         <MappingFragment StoreEntitySet="ALCOHOL_SPENDING_MONEY">
-          <ScalarProperty Name="ALCOHOL_SPENDING_MONEY_NOTE" ColumnName="ALCOHOL_SPENDING_MONEY_NOTE" />
-          <ScalarProperty Name="ALCOHOL_SPENDING_MONEY_QUANTITY" ColumnName="ALCOHOL_SPENDING_MONEY_QUANTITY" />
-          <ScalarProperty Name="ALCOHOL_SPENDING_MONEY_CONTENT" ColumnName="ALCOHOL_SPENDING_MONEY_CONTENT" />
-          <ScalarProperty Name="DATE_ID" ColumnName="DATE_ID" />
           <ScalarProperty Name="ALCOHOL_SPENDING_MONEY_ID" ColumnName="ALCOHOL_SPENDING_MONEY_ID" />
+          <ScalarProperty Name="DATE_ID" ColumnName="DATE_ID" />
+          <ScalarProperty Name="ALCOHOL_SPENDING_MONEY_CONTENT" ColumnName="ALCOHOL_SPENDING_MONEY_CONTENT" />
+          <ScalarProperty Name="ALCOHOL_SPENDING_MONEY_QUANTITY" ColumnName="ALCOHOL_SPENDING_MONEY_QUANTITY" />
+          <ScalarProperty Name="ALCOHOL_SPENDING_MONEY_NOTE" ColumnName="ALCOHOL_SPENDING_MONEY_NOTE" />
+          <ScalarProperty Name="ALCOHOL_SPENDING_MONEY_PRICE" ColumnName="ALCOHOL_SPENDING_MONEY_PRICE" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="COLLECT_MONEY">
       <EntityTypeMapping TypeName="MyCoffeeWebAppModel.COLLECT_MONEY">
         <MappingFragment StoreEntitySet="COLLECT_MONEY">
-          <ScalarProperty Name="CLMN_NOTE" ColumnName="CLMN_NOTE" />
-          <ScalarProperty Name="CLMN_PRICE" ColumnName="CLMN_PRICE" />
-          <ScalarProperty Name="CLMN_QUANLITY" ColumnName="CLMN_QUANLITY" />
-          <ScalarProperty Name="MN_ID" ColumnName="MN_ID" />
-          <ScalarProperty Name="DATE_ID" ColumnName="DATE_ID" />
           <ScalarProperty Name="CLMN_ID" ColumnName="CLMN_ID" />
+          <ScalarProperty Name="DATE_ID" ColumnName="DATE_ID" />
+          <ScalarProperty Name="MN_ID" ColumnName="MN_ID" />
+          <ScalarProperty Name="CLMN_QUANLITY" ColumnName="CLMN_QUANLITY" />
+          <ScalarProperty Name="CLMN_PRICE" ColumnName="CLMN_PRICE" />
+          <ScalarProperty Name="CLMN_NOTE" ColumnName="CLMN_NOTE" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="DATEs">
       <EntityTypeMapping TypeName="MyCoffeeWebAppModel.DATE">
         <MappingFragment StoreEntitySet="DATE">
-          <ScalarProperty Name="note" ColumnName="note" />
-          <ScalarProperty Name="date_name" ColumnName="date_name" />
           <ScalarProperty Name="DATE_ID" ColumnName="DATE_ID" />
+          <ScalarProperty Name="date_name" ColumnName="date_name" />
+          <ScalarProperty Name="note" ColumnName="note" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="MENUs">
       <EntityTypeMapping TypeName="MyCoffeeWebAppModel.MENU">
         <MappingFragment StoreEntitySet="MENU">
-          <ScalarProperty Name="MN_PRICE" ColumnName="MN_PRICE" />
-          <ScalarProperty Name="MN_PRODUCTNAME" ColumnName="MN_PRODUCTNAME" />
           <ScalarProperty Name="MN_ID" ColumnName="MN_ID" />
+          <ScalarProperty Name="MN_PRODUCTNAME" ColumnName="MN_PRODUCTNAME" />
+          <ScalarProperty Name="MN_PRICE" ColumnName="MN_PRICE" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="SPENDING_MONEY">
       <EntityTypeMapping TypeName="MyCoffeeWebAppModel.SPENDING_MONEY">
         <MappingFragment StoreEntitySet="SPENDING_MONEY">
-          <ScalarProperty Name="SPENDING_NOTE" ColumnName="SPENDING_NOTE" />
-          <ScalarProperty Name="SPENDING_PRICE" ColumnName="SPENDING_PRICE" />
-          <ScalarProperty Name="SPENDING_QUANLITY" ColumnName="SPENDING_QUANLITY" />
-          <ScalarProperty Name="SPENDING_CONTENT" ColumnName="SPENDING_CONTENT" />
-          <ScalarProperty Name="DATE" ColumnName="DATE" />
           <ScalarProperty Name="SPENDING_ID" ColumnName="SPENDING_ID" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="sysdiagrams">
-      <EntityTypeMapping TypeName="MyCoffeeWebAppModel.sysdiagram">
-        <MappingFragment StoreEntitySet="sysdiagrams">
-          <ScalarProperty Name="definition" ColumnName="definition" />
-          <ScalarProperty Name="version" ColumnName="version" />
-          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
-          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
-          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="DATE" ColumnName="DATE" />
+          <ScalarProperty Name="SPENDING_CONTENT" ColumnName="SPENDING_CONTENT" />
+          <ScalarProperty Name="SPENDING_QUANLITY" ColumnName="SPENDING_QUANLITY" />
+          <ScalarProperty Name="SPENDING_PRICE" ColumnName="SPENDING_PRICE" />
+          <ScalarProperty Name="SPENDING_NOTE" ColumnName="SPENDING_NOTE" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="TYPE_OF_WINE">
       <EntityTypeMapping TypeName="MyCoffeeWebAppModel.TYPE_OF_WINE">
         <MappingFragment StoreEntitySet="TYPE_OF_WINE">
-          <ScalarProperty Name="TYPE_OF_WINE_PRICE" ColumnName="TYPE_OF_WINE_PRICE" />
-          <ScalarProperty Name="TYPE_OF_WINE_NAME" ColumnName="TYPE_OF_WINE_NAME" />
           <ScalarProperty Name="TYPE_OF_WINE_ID" ColumnName="TYPE_OF_WINE_ID" />
+          <ScalarProperty Name="TYPE_OF_WINE_NAME" ColumnName="TYPE_OF_WINE_NAME" />
+          <ScalarProperty Name="TYPE_OF_WINE_PRICE" ColumnName="TYPE_OF_WINE_PRICE" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

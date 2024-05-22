@@ -19,6 +19,7 @@
     <Property Name="ALCOHOL_SPENDING_MONEY_CONTENT" Type="varchar" MaxLength="200" Nullable="false" />
     <Property Name="ALCOHOL_SPENDING_MONEY_QUANTITY" Type="float" Nullable="false" />
     <Property Name="ALCOHOL_SPENDING_MONEY_NOTE" Type="varchar" MaxLength="300" />
+    <Property Name="ALCOHOL_SPENDING_MONEY_PRICE" Type="bigint" Nullable="false" />
   </EntityType>
   <EntityType Name="COLLECT_MONEY">
     <Key>
@@ -57,16 +58,6 @@
     <Property Name="SPENDING_QUANLITY" Type="int" Nullable="false" />
     <Property Name="SPENDING_PRICE" Type="bigint" Nullable="false" />
     <Property Name="SPENDING_NOTE" Type="varchar" MaxLength="150" />
-  </EntityType>
-  <EntityType Name="sysdiagrams">
-    <Key>
-      <PropertyRef Name="diagram_id" />
-    </Key>
-    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
-    <Property Name="principal_id" Type="int" Nullable="false" />
-    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="version" Type="int" />
-    <Property Name="definition" Type="varbinary(max)" />
   </EntityType>
   <EntityType Name="TYPE_OF_WINE">
     <Key>
@@ -163,7 +154,6 @@
     <EntitySet Name="DATE" EntityType="Self.DATE" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="MENU" EntityType="Self.MENU" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="SPENDING_MONEY" EntityType="Self.SPENDING_MONEY" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TYPE_OF_WINE" EntityType="Self.TYPE_OF_WINE" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK__ALCOHOL_C__DATE___30F848ED" Association="Self.FK__ALCOHOL_C__DATE___30F848ED">
       <End Role="DATE" EntitySet="DATE" />

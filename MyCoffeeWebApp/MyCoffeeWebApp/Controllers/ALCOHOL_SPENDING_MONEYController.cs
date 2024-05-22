@@ -82,7 +82,7 @@ namespace MyCoffeeWebApp.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.DATE_ID = new SelectList(db.DATEs, "DATE_ID", "date_name", aLCOHOL_SPENDING_MONEY.DATE_ID);
+            ViewBag.DATE_ID = new SelectList(db.DATEs, "DATE_ID", "DATE_ID", aLCOHOL_SPENDING_MONEY.DATE_ID);
             return View(aLCOHOL_SPENDING_MONEY);
         }
 

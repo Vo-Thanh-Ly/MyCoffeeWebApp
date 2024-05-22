@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="MyCoffeeWebAppModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="MyCoffeeWebAppModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="ALCOHOL_COLLECTS_MONEY">
           <Key>
             <PropertyRef Name="ALCOHOL_COLLECTS_MONEY_ID" />
@@ -63,16 +63,6 @@
           <Property Name="SPENDING_QUANLITY" Type="int" Nullable="false" />
           <Property Name="SPENDING_PRICE" Type="bigint" Nullable="false" />
           <Property Name="SPENDING_NOTE" Type="varchar" MaxLength="150" />
-        </EntityType>
-        <EntityType Name="sysdiagrams">
-          <Key>
-            <PropertyRef Name="diagram_id" />
-          </Key>
-          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
-          <Property Name="principal_id" Type="int" Nullable="false" />
-          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="version" Type="int" />
-          <Property Name="definition" Type="varbinary(max)" />
         </EntityType>
         <EntityType Name="TYPE_OF_WINE">
           <Key>
@@ -169,7 +159,6 @@
           <EntitySet Name="DATE" EntityType="Self.DATE" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="MENU" EntityType="Self.MENU" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SPENDING_MONEY" EntityType="Self.SPENDING_MONEY" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TYPE_OF_WINE" EntityType="Self.TYPE_OF_WINE" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK__ALCOHOL_C__DATE___30F848ED" Association="Self.FK__ALCOHOL_C__DATE___30F848ED">
             <End Role="DATE" EntitySet="DATE" />
@@ -196,44 +185,11 @@
             <End Role="SPENDING_MONEY" EntitySet="SPENDING_MONEY" />
           </AssociationSet>
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="MyCoffeeWebAppModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityContainer Name="MyCoffeeWebAppEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="ALCOHOL_COLLECTS_MONEY" EntityType="MyCoffeeWebAppModel.ALCOHOL_COLLECTS_MONEY" />
-          <EntitySet Name="ALCOHOL_SPENDING_MONEY" EntityType="MyCoffeeWebAppModel.ALCOHOL_SPENDING_MONEY" />
-          <EntitySet Name="COLLECT_MONEY" EntityType="MyCoffeeWebAppModel.COLLECT_MONEY" />
-          <EntitySet Name="DATEs" EntityType="MyCoffeeWebAppModel.DATE" />
-          <EntitySet Name="MENUs" EntityType="MyCoffeeWebAppModel.MENU" />
-          <EntitySet Name="SPENDING_MONEY" EntityType="MyCoffeeWebAppModel.SPENDING_MONEY" />
-          <EntitySet Name="sysdiagrams" EntityType="MyCoffeeWebAppModel.sysdiagram" />
-          <EntitySet Name="TYPE_OF_WINE" EntityType="MyCoffeeWebAppModel.TYPE_OF_WINE" />
-          <AssociationSet Name="FK__ALCOHOL_C__DATE___30F848ED" Association="MyCoffeeWebAppModel.FK__ALCOHOL_C__DATE___30F848ED">
-            <End Role="DATE" EntitySet="DATEs" />
-            <End Role="ALCOHOL_COLLECTS_MONEY" EntitySet="ALCOHOL_COLLECTS_MONEY" />
-          </AssociationSet>
-          <AssociationSet Name="FK__ALCOHOL_C__TYPE___31EC6D26" Association="MyCoffeeWebAppModel.FK__ALCOHOL_C__TYPE___31EC6D26">
-            <End Role="TYPE_OF_WINE" EntitySet="TYPE_OF_WINE" />
-            <End Role="ALCOHOL_COLLECTS_MONEY" EntitySet="ALCOHOL_COLLECTS_MONEY" />
-          </AssociationSet>
-          <AssociationSet Name="FK__ALCOHOL_S__DATE___37A5467C" Association="MyCoffeeWebAppModel.FK__ALCOHOL_S__DATE___37A5467C">
-            <End Role="DATE" EntitySet="DATEs" />
-            <End Role="ALCOHOL_SPENDING_MONEY" EntitySet="ALCOHOL_SPENDING_MONEY" />
-          </AssociationSet>
-          <AssociationSet Name="FK__COLLECT_M__DATE___2A4B4B5E" Association="MyCoffeeWebAppModel.FK__COLLECT_M__DATE___2A4B4B5E">
-            <End Role="DATE" EntitySet="DATEs" />
-            <End Role="COLLECT_MONEY" EntitySet="COLLECT_MONEY" />
-          </AssociationSet>
-          <AssociationSet Name="FK__COLLECT_M__MN_ID__2B3F6F97" Association="MyCoffeeWebAppModel.FK__COLLECT_M__MN_ID__2B3F6F97">
-            <End Role="MENU" EntitySet="MENUs" />
-            <End Role="COLLECT_MONEY" EntitySet="COLLECT_MONEY" />
-          </AssociationSet>
-          <AssociationSet Name="FK__SPENDING_M__DATE__2E1BDC42" Association="MyCoffeeWebAppModel.FK__SPENDING_M__DATE__2E1BDC42">
-            <End Role="DATE" EntitySet="DATEs" />
-            <End Role="SPENDING_MONEY" EntitySet="SPENDING_MONEY" />
-          </AssociationSet>
-        </EntityContainer>
         <EntityType Name="ALCOHOL_COLLECTS_MONEY">
           <Key>
             <PropertyRef Name="ALCOHOL_COLLECTS_MONEY_ID" />
@@ -242,9 +198,9 @@
           <Property Name="DATE_ID" Type="DateTime" Precision="0" />
           <Property Name="TYPE_OF_WINE_ID" Type="Int32" />
           <Property Name="ALCOHOL_COLLECTS_MONEY_PRICE" Type="Int64" Nullable="false" />
-          <Property Name="ALCOHOL_COLLECTS_MONEY_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="false" />
-          <NavigationProperty Name="DATE" Relationship="MyCoffeeWebAppModel.FK__ALCOHOL_C__DATE___30F848ED" FromRole="ALCOHOL_COLLECTS_MONEY" ToRole="DATE" />
-          <NavigationProperty Name="TYPE_OF_WINE" Relationship="MyCoffeeWebAppModel.FK__ALCOHOL_C__TYPE___31EC6D26" FromRole="ALCOHOL_COLLECTS_MONEY" ToRole="TYPE_OF_WINE" />
+          <Property Name="ALCOHOL_COLLECTS_MONEY_ID" Type="String" MaxLength="20" FixedLength="true" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="DATE" Relationship="Self.FK__ALCOHOL_C__DATE___30F848ED" FromRole="ALCOHOL_COLLECTS_MONEY" ToRole="DATE" />
+          <NavigationProperty Name="TYPE_OF_WINE" Relationship="Self.FK__ALCOHOL_C__TYPE___31EC6D26" FromRole="ALCOHOL_COLLECTS_MONEY" ToRole="TYPE_OF_WINE" />
         </EntityType>
         <EntityType Name="ALCOHOL_SPENDING_MONEY">
           <Key>
@@ -252,11 +208,11 @@
           </Key>
           <Property Name="ALCOHOL_SPENDING_MONEY_ID" Type="Int64" Nullable="false" />
           <Property Name="DATE_ID" Type="DateTime" Precision="0" />
-          <Property Name="ALCOHOL_SPENDING_MONEY_CONTENT" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="ALCOHOL_SPENDING_MONEY_CONTENT" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="ALCOHOL_SPENDING_MONEY_QUANTITY" Type="Double" Nullable="false" />
           <Property Name="ALCOHOL_SPENDING_MONEY_NOTE" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="DATE" Relationship="MyCoffeeWebAppModel.FK__ALCOHOL_S__DATE___37A5467C" FromRole="ALCOHOL_SPENDING_MONEY" ToRole="DATE" />
           <Property Name="ALCOHOL_SPENDING_MONEY_PRICE" Type="Int64" Nullable="false" />
+          <NavigationProperty Name="DATE" Relationship="Self.FK__ALCOHOL_S__DATE___37A5467C" FromRole="ALCOHOL_SPENDING_MONEY" ToRole="DATE" />
         </EntityType>
         <EntityType Name="COLLECT_MONEY">
           <Key>
@@ -268,8 +224,8 @@
           <Property Name="CLMN_QUANLITY" Type="Int32" Nullable="false" />
           <Property Name="CLMN_PRICE" Type="Int64" Nullable="false" />
           <Property Name="CLMN_NOTE" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="DATE" Relationship="MyCoffeeWebAppModel.FK__COLLECT_M__DATE___2A4B4B5E" FromRole="COLLECT_MONEY" ToRole="DATE" />
-          <NavigationProperty Name="MENU" Relationship="MyCoffeeWebAppModel.FK__COLLECT_M__MN_ID__2B3F6F97" FromRole="COLLECT_MONEY" ToRole="MENU" />
+          <NavigationProperty Name="DATE" Relationship="Self.FK__COLLECT_M__DATE___2A4B4B5E" FromRole="COLLECT_MONEY" ToRole="DATE" />
+          <NavigationProperty Name="MENU" Relationship="Self.FK__COLLECT_M__MN_ID__2B3F6F97" FromRole="COLLECT_MONEY" ToRole="MENU" />
         </EntityType>
         <EntityType Name="DATE">
           <Key>
@@ -278,19 +234,19 @@
           <Property Name="DATE_ID" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="date_name" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
           <Property Name="note" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="ALCOHOL_COLLECTS_MONEY" Relationship="MyCoffeeWebAppModel.FK__ALCOHOL_C__DATE___30F848ED" FromRole="DATE" ToRole="ALCOHOL_COLLECTS_MONEY" />
-          <NavigationProperty Name="ALCOHOL_SPENDING_MONEY" Relationship="MyCoffeeWebAppModel.FK__ALCOHOL_S__DATE___37A5467C" FromRole="DATE" ToRole="ALCOHOL_SPENDING_MONEY" />
-          <NavigationProperty Name="COLLECT_MONEY" Relationship="MyCoffeeWebAppModel.FK__COLLECT_M__DATE___2A4B4B5E" FromRole="DATE" ToRole="COLLECT_MONEY" />
-          <NavigationProperty Name="SPENDING_MONEY" Relationship="MyCoffeeWebAppModel.FK__SPENDING_M__DATE__2E1BDC42" FromRole="DATE" ToRole="SPENDING_MONEY" />
+          <NavigationProperty Name="ALCOHOL_COLLECTS_MONEY" Relationship="Self.FK__ALCOHOL_C__DATE___30F848ED" FromRole="DATE" ToRole="ALCOHOL_COLLECTS_MONEY" />
+          <NavigationProperty Name="ALCOHOL_SPENDING_MONEY" Relationship="Self.FK__ALCOHOL_S__DATE___37A5467C" FromRole="DATE" ToRole="ALCOHOL_SPENDING_MONEY" />
+          <NavigationProperty Name="COLLECT_MONEY" Relationship="Self.FK__COLLECT_M__DATE___2A4B4B5E" FromRole="DATE" ToRole="COLLECT_MONEY" />
+          <NavigationProperty Name="SPENDING_MONEY" Relationship="Self.FK__SPENDING_M__DATE__2E1BDC42" FromRole="DATE" ToRole="SPENDING_MONEY" />
         </EntityType>
         <EntityType Name="MENU">
           <Key>
             <PropertyRef Name="MN_ID" />
           </Key>
           <Property Name="MN_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="MN_PRODUCTNAME" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="MN_PRODUCTNAME" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="MN_PRICE" Type="Int64" />
-          <NavigationProperty Name="COLLECT_MONEY" Relationship="MyCoffeeWebAppModel.FK__COLLECT_M__MN_ID__2B3F6F97" FromRole="MENU" ToRole="COLLECT_MONEY" />
+          <NavigationProperty Name="COLLECT_MONEY" Relationship="Self.FK__COLLECT_M__MN_ID__2B3F6F97" FromRole="MENU" ToRole="COLLECT_MONEY" />
         </EntityType>
         <EntityType Name="SPENDING_MONEY">
           <Key>
@@ -298,36 +254,26 @@
           </Key>
           <Property Name="SPENDING_ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="DATE" Type="DateTime" Precision="0" />
-          <Property Name="SPENDING_CONTENT" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="SPENDING_CONTENT" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="SPENDING_QUANLITY" Type="Int32" Nullable="false" />
           <Property Name="SPENDING_PRICE" Type="Int64" Nullable="false" />
           <Property Name="SPENDING_NOTE" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="DATE1" Relationship="MyCoffeeWebAppModel.FK__SPENDING_M__DATE__2E1BDC42" FromRole="SPENDING_MONEY" ToRole="DATE" />
-        </EntityType>
-        <EntityType Name="sysdiagram">
-          <Key>
-            <PropertyRef Name="diagram_id" />
-          </Key>
-          <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
-          <Property Name="principal_id" Type="Int32" Nullable="false" />
-          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="version" Type="Int32" />
-          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <NavigationProperty Name="DATE1" Relationship="Self.FK__SPENDING_M__DATE__2E1BDC42" FromRole="SPENDING_MONEY" ToRole="DATE" />
         </EntityType>
         <EntityType Name="TYPE_OF_WINE">
           <Key>
             <PropertyRef Name="TYPE_OF_WINE_ID" />
           </Key>
           <Property Name="TYPE_OF_WINE_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="TYPE_OF_WINE_NAME" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="TYPE_OF_WINE_NAME" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="TYPE_OF_WINE_PRICE" Type="Int64" Nullable="false" />
-          <NavigationProperty Name="ALCOHOL_COLLECTS_MONEY" Relationship="MyCoffeeWebAppModel.FK__ALCOHOL_C__TYPE___31EC6D26" FromRole="TYPE_OF_WINE" ToRole="ALCOHOL_COLLECTS_MONEY" />
+          <NavigationProperty Name="ALCOHOL_COLLECTS_MONEY" Relationship="Self.FK__ALCOHOL_C__TYPE___31EC6D26" FromRole="TYPE_OF_WINE" ToRole="ALCOHOL_COLLECTS_MONEY" />
         </EntityType>
         <Association Name="FK__ALCOHOL_C__DATE___30F848ED">
-          <End Type="MyCoffeeWebAppModel.DATE" Role="DATE" Multiplicity="0..1">
+          <End Role="DATE" Type="Self.DATE" Multiplicity="0..1">
             <OnDelete Action="Cascade" />
           </End>
-          <End Type="MyCoffeeWebAppModel.ALCOHOL_COLLECTS_MONEY" Role="ALCOHOL_COLLECTS_MONEY" Multiplicity="*" />
+          <End Role="ALCOHOL_COLLECTS_MONEY" Type="Self.ALCOHOL_COLLECTS_MONEY" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="DATE">
               <PropertyRef Name="DATE_ID" />
@@ -338,8 +284,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK__ALCOHOL_C__TYPE___31EC6D26">
-          <End Type="MyCoffeeWebAppModel.TYPE_OF_WINE" Role="TYPE_OF_WINE" Multiplicity="0..1" />
-          <End Type="MyCoffeeWebAppModel.ALCOHOL_COLLECTS_MONEY" Role="ALCOHOL_COLLECTS_MONEY" Multiplicity="*" />
+          <End Role="TYPE_OF_WINE" Type="Self.TYPE_OF_WINE" Multiplicity="0..1" />
+          <End Role="ALCOHOL_COLLECTS_MONEY" Type="Self.ALCOHOL_COLLECTS_MONEY" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="TYPE_OF_WINE">
               <PropertyRef Name="TYPE_OF_WINE_ID" />
@@ -350,10 +296,10 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK__ALCOHOL_S__DATE___37A5467C">
-          <End Type="MyCoffeeWebAppModel.DATE" Role="DATE" Multiplicity="0..1">
+          <End Role="DATE" Type="Self.DATE" Multiplicity="0..1">
             <OnDelete Action="Cascade" />
           </End>
-          <End Type="MyCoffeeWebAppModel.ALCOHOL_SPENDING_MONEY" Role="ALCOHOL_SPENDING_MONEY" Multiplicity="*" />
+          <End Role="ALCOHOL_SPENDING_MONEY" Type="Self.ALCOHOL_SPENDING_MONEY" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="DATE">
               <PropertyRef Name="DATE_ID" />
@@ -364,10 +310,10 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK__COLLECT_M__DATE___2A4B4B5E">
-          <End Type="MyCoffeeWebAppModel.DATE" Role="DATE" Multiplicity="0..1">
+          <End Role="DATE" Type="Self.DATE" Multiplicity="0..1">
             <OnDelete Action="Cascade" />
           </End>
-          <End Type="MyCoffeeWebAppModel.COLLECT_MONEY" Role="COLLECT_MONEY" Multiplicity="*" />
+          <End Role="COLLECT_MONEY" Type="Self.COLLECT_MONEY" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="DATE">
               <PropertyRef Name="DATE_ID" />
@@ -378,8 +324,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK__COLLECT_M__MN_ID__2B3F6F97">
-          <End Type="MyCoffeeWebAppModel.MENU" Role="MENU" Multiplicity="0..1" />
-          <End Type="MyCoffeeWebAppModel.COLLECT_MONEY" Role="COLLECT_MONEY" Multiplicity="*" />
+          <End Role="MENU" Type="Self.MENU" Multiplicity="0..1" />
+          <End Role="COLLECT_MONEY" Type="Self.COLLECT_MONEY" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="MENU">
               <PropertyRef Name="MN_ID" />
@@ -390,10 +336,10 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK__SPENDING_M__DATE__2E1BDC42">
-          <End Type="MyCoffeeWebAppModel.DATE" Role="DATE" Multiplicity="0..1">
+          <End Role="DATE" Type="Self.DATE" Multiplicity="0..1">
             <OnDelete Action="Cascade" />
           </End>
-          <End Type="MyCoffeeWebAppModel.SPENDING_MONEY" Role="SPENDING_MONEY" Multiplicity="*" />
+          <End Role="SPENDING_MONEY" Type="Self.SPENDING_MONEY" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="DATE">
               <PropertyRef Name="DATE_ID" />
@@ -403,7 +349,40 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        </Schema>
+        <EntityContainer Name="MyCoffeeWebAppEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ALCOHOL_COLLECTS_MONEY" EntityType="Self.ALCOHOL_COLLECTS_MONEY" />
+          <EntitySet Name="ALCOHOL_SPENDING_MONEY" EntityType="Self.ALCOHOL_SPENDING_MONEY" />
+          <EntitySet Name="COLLECT_MONEY" EntityType="Self.COLLECT_MONEY" />
+          <EntitySet Name="DATEs" EntityType="Self.DATE" />
+          <EntitySet Name="MENUs" EntityType="Self.MENU" />
+          <EntitySet Name="SPENDING_MONEY" EntityType="Self.SPENDING_MONEY" />
+          <EntitySet Name="TYPE_OF_WINE" EntityType="Self.TYPE_OF_WINE" />
+          <AssociationSet Name="FK__ALCOHOL_C__DATE___30F848ED" Association="Self.FK__ALCOHOL_C__DATE___30F848ED">
+            <End Role="DATE" EntitySet="DATEs" />
+            <End Role="ALCOHOL_COLLECTS_MONEY" EntitySet="ALCOHOL_COLLECTS_MONEY" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ALCOHOL_C__TYPE___31EC6D26" Association="Self.FK__ALCOHOL_C__TYPE___31EC6D26">
+            <End Role="TYPE_OF_WINE" EntitySet="TYPE_OF_WINE" />
+            <End Role="ALCOHOL_COLLECTS_MONEY" EntitySet="ALCOHOL_COLLECTS_MONEY" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ALCOHOL_S__DATE___37A5467C" Association="Self.FK__ALCOHOL_S__DATE___37A5467C">
+            <End Role="DATE" EntitySet="DATEs" />
+            <End Role="ALCOHOL_SPENDING_MONEY" EntitySet="ALCOHOL_SPENDING_MONEY" />
+          </AssociationSet>
+          <AssociationSet Name="FK__COLLECT_M__DATE___2A4B4B5E" Association="Self.FK__COLLECT_M__DATE___2A4B4B5E">
+            <End Role="DATE" EntitySet="DATEs" />
+            <End Role="COLLECT_MONEY" EntitySet="COLLECT_MONEY" />
+          </AssociationSet>
+          <AssociationSet Name="FK__COLLECT_M__MN_ID__2B3F6F97" Association="Self.FK__COLLECT_M__MN_ID__2B3F6F97">
+            <End Role="MENU" EntitySet="MENUs" />
+            <End Role="COLLECT_MONEY" EntitySet="COLLECT_MONEY" />
+          </AssociationSet>
+          <AssociationSet Name="FK__SPENDING_M__DATE__2E1BDC42" Association="Self.FK__SPENDING_M__DATE__2E1BDC42">
+            <End Role="DATE" EntitySet="DATEs" />
+            <End Role="SPENDING_MONEY" EntitySet="SPENDING_MONEY" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
@@ -412,85 +391,74 @@
           <EntitySetMapping Name="ALCOHOL_COLLECTS_MONEY">
             <EntityTypeMapping TypeName="MyCoffeeWebAppModel.ALCOHOL_COLLECTS_MONEY">
               <MappingFragment StoreEntitySet="ALCOHOL_COLLECTS_MONEY">
-                <ScalarProperty Name="ALCOHOL_COLLECTS_MONEY_ID" ColumnName="ALCOHOL_COLLECTS_MONEY_ID" />
-                <ScalarProperty Name="ALCOHOL_COLLECTS_MONEY_PRICE" ColumnName="ALCOHOL_COLLECTS_MONEY_PRICE" />
-                <ScalarProperty Name="TYPE_OF_WINE_ID" ColumnName="TYPE_OF_WINE_ID" />
-                <ScalarProperty Name="DATE_ID" ColumnName="DATE_ID" />
                 <ScalarProperty Name="ALCOHOL_COLLECTS_MONEY_QUANTITY" ColumnName="ALCOHOL_COLLECTS_MONEY_QUANTITY" />
+                <ScalarProperty Name="DATE_ID" ColumnName="DATE_ID" />
+                <ScalarProperty Name="TYPE_OF_WINE_ID" ColumnName="TYPE_OF_WINE_ID" />
+                <ScalarProperty Name="ALCOHOL_COLLECTS_MONEY_PRICE" ColumnName="ALCOHOL_COLLECTS_MONEY_PRICE" />
+                <ScalarProperty Name="ALCOHOL_COLLECTS_MONEY_ID" ColumnName="ALCOHOL_COLLECTS_MONEY_ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="ALCOHOL_SPENDING_MONEY">
             <EntityTypeMapping TypeName="MyCoffeeWebAppModel.ALCOHOL_SPENDING_MONEY">
               <MappingFragment StoreEntitySet="ALCOHOL_SPENDING_MONEY">
-                <ScalarProperty Name="ALCOHOL_SPENDING_MONEY_PRICE" ColumnName="ALCOHOL_SPENDING_MONEY_PRICE" />
-                <ScalarProperty Name="ALCOHOL_SPENDING_MONEY_NOTE" ColumnName="ALCOHOL_SPENDING_MONEY_NOTE" />
-                <ScalarProperty Name="ALCOHOL_SPENDING_MONEY_QUANTITY" ColumnName="ALCOHOL_SPENDING_MONEY_QUANTITY" />
-                <ScalarProperty Name="ALCOHOL_SPENDING_MONEY_CONTENT" ColumnName="ALCOHOL_SPENDING_MONEY_CONTENT" />
-                <ScalarProperty Name="DATE_ID" ColumnName="DATE_ID" />
                 <ScalarProperty Name="ALCOHOL_SPENDING_MONEY_ID" ColumnName="ALCOHOL_SPENDING_MONEY_ID" />
+                <ScalarProperty Name="DATE_ID" ColumnName="DATE_ID" />
+                <ScalarProperty Name="ALCOHOL_SPENDING_MONEY_CONTENT" ColumnName="ALCOHOL_SPENDING_MONEY_CONTENT" />
+                <ScalarProperty Name="ALCOHOL_SPENDING_MONEY_QUANTITY" ColumnName="ALCOHOL_SPENDING_MONEY_QUANTITY" />
+                <ScalarProperty Name="ALCOHOL_SPENDING_MONEY_NOTE" ColumnName="ALCOHOL_SPENDING_MONEY_NOTE" />
+                <ScalarProperty Name="ALCOHOL_SPENDING_MONEY_PRICE" ColumnName="ALCOHOL_SPENDING_MONEY_PRICE" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="COLLECT_MONEY">
             <EntityTypeMapping TypeName="MyCoffeeWebAppModel.COLLECT_MONEY">
               <MappingFragment StoreEntitySet="COLLECT_MONEY">
-                <ScalarProperty Name="CLMN_NOTE" ColumnName="CLMN_NOTE" />
-                <ScalarProperty Name="CLMN_PRICE" ColumnName="CLMN_PRICE" />
-                <ScalarProperty Name="CLMN_QUANLITY" ColumnName="CLMN_QUANLITY" />
-                <ScalarProperty Name="MN_ID" ColumnName="MN_ID" />
-                <ScalarProperty Name="DATE_ID" ColumnName="DATE_ID" />
                 <ScalarProperty Name="CLMN_ID" ColumnName="CLMN_ID" />
+                <ScalarProperty Name="DATE_ID" ColumnName="DATE_ID" />
+                <ScalarProperty Name="MN_ID" ColumnName="MN_ID" />
+                <ScalarProperty Name="CLMN_QUANLITY" ColumnName="CLMN_QUANLITY" />
+                <ScalarProperty Name="CLMN_PRICE" ColumnName="CLMN_PRICE" />
+                <ScalarProperty Name="CLMN_NOTE" ColumnName="CLMN_NOTE" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="DATEs">
             <EntityTypeMapping TypeName="MyCoffeeWebAppModel.DATE">
               <MappingFragment StoreEntitySet="DATE">
-                <ScalarProperty Name="note" ColumnName="note" />
-                <ScalarProperty Name="date_name" ColumnName="date_name" />
                 <ScalarProperty Name="DATE_ID" ColumnName="DATE_ID" />
+                <ScalarProperty Name="date_name" ColumnName="date_name" />
+                <ScalarProperty Name="note" ColumnName="note" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="MENUs">
             <EntityTypeMapping TypeName="MyCoffeeWebAppModel.MENU">
               <MappingFragment StoreEntitySet="MENU">
-                <ScalarProperty Name="MN_PRICE" ColumnName="MN_PRICE" />
-                <ScalarProperty Name="MN_PRODUCTNAME" ColumnName="MN_PRODUCTNAME" />
                 <ScalarProperty Name="MN_ID" ColumnName="MN_ID" />
+                <ScalarProperty Name="MN_PRODUCTNAME" ColumnName="MN_PRODUCTNAME" />
+                <ScalarProperty Name="MN_PRICE" ColumnName="MN_PRICE" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="SPENDING_MONEY">
             <EntityTypeMapping TypeName="MyCoffeeWebAppModel.SPENDING_MONEY">
               <MappingFragment StoreEntitySet="SPENDING_MONEY">
-                <ScalarProperty Name="SPENDING_NOTE" ColumnName="SPENDING_NOTE" />
-                <ScalarProperty Name="SPENDING_PRICE" ColumnName="SPENDING_PRICE" />
-                <ScalarProperty Name="SPENDING_QUANLITY" ColumnName="SPENDING_QUANLITY" />
-                <ScalarProperty Name="SPENDING_CONTENT" ColumnName="SPENDING_CONTENT" />
-                <ScalarProperty Name="DATE" ColumnName="DATE" />
                 <ScalarProperty Name="SPENDING_ID" ColumnName="SPENDING_ID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="sysdiagrams">
-            <EntityTypeMapping TypeName="MyCoffeeWebAppModel.sysdiagram">
-              <MappingFragment StoreEntitySet="sysdiagrams">
-                <ScalarProperty Name="definition" ColumnName="definition" />
-                <ScalarProperty Name="version" ColumnName="version" />
-                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
-                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
-                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="DATE" ColumnName="DATE" />
+                <ScalarProperty Name="SPENDING_CONTENT" ColumnName="SPENDING_CONTENT" />
+                <ScalarProperty Name="SPENDING_QUANLITY" ColumnName="SPENDING_QUANLITY" />
+                <ScalarProperty Name="SPENDING_PRICE" ColumnName="SPENDING_PRICE" />
+                <ScalarProperty Name="SPENDING_NOTE" ColumnName="SPENDING_NOTE" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="TYPE_OF_WINE">
             <EntityTypeMapping TypeName="MyCoffeeWebAppModel.TYPE_OF_WINE">
               <MappingFragment StoreEntitySet="TYPE_OF_WINE">
-                <ScalarProperty Name="TYPE_OF_WINE_PRICE" ColumnName="TYPE_OF_WINE_PRICE" />
-                <ScalarProperty Name="TYPE_OF_WINE_NAME" ColumnName="TYPE_OF_WINE_NAME" />
                 <ScalarProperty Name="TYPE_OF_WINE_ID" ColumnName="TYPE_OF_WINE_ID" />
+                <ScalarProperty Name="TYPE_OF_WINE_NAME" ColumnName="TYPE_OF_WINE_NAME" />
+                <ScalarProperty Name="TYPE_OF_WINE_PRICE" ColumnName="TYPE_OF_WINE_PRICE" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
